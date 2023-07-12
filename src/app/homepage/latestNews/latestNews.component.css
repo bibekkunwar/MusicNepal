@@ -1,0 +1,26 @@
+
+.container{
+  padding-left: 20px;
+}
+
+
+
+.featured-text{
+  color: aqua;
+  z-index: 2;
+  position: relative;
+}
+
+.featured-button{
+  color: aqua;
+  z-index: 1;
+  position: relative;
+  background-color: #191919;
+  border-radius: 30px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.bg-feature{
+  background-color: #191919;
+}
