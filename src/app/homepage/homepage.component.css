@@ -13,13 +13,13 @@
   z-index: 1;
 }
 
-.banner, .featured_release, .latestVideos, .featuredArtists, .latestNews {
+.banner, .featured_release, .latestVideos, .featuredArtists, .latestNews, .footer {
   flex-grow: 1;
   margin:0 0 0 210px; /* Adjust the margin as per your requirements */
   width: auto;
 }
 
-.featured_release, .latestVideos, .featuredArtists, .latestNews{
+.featured_release, .latestVideos, .featuredArtists, .latestNews, .footer{
   padding-left: 30px;
 }
 

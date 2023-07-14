@@ -1,40 +1,26 @@
-.container {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  height: 80vh; /* Adjust the height as per your requirements */
+.banner-text{
+  position: absolute;
+  bottom: 100px;
+  left: 70px;
 }
 
-.home-banner{
-  width: 100%;
+.banner-text button{
+
+  background-color: red;
+  border-radius: 30px;
+  padding:10px 20px 10px 20px;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
 
 }
 
-.banner {
-  flex-grow: 1;
-
-  margin-left: 25%; /* Adjust the margin as per the navbar width */
-  /* Add any additional styles for the banner component */
+.banner-text button:hover{
+  font-size: 20px;
+  transition: 0.4s ease-in-out;
 }
 
+.carousel-control-prev, carousel-control-next{
+  position: absolute;
+  left: -30px;
 
-.carousel-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-behavior: smooth;
 }
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-  scroll-behavior: smooth;
-  object-fit: cover;
-}
-
-
-
-
-
-
-

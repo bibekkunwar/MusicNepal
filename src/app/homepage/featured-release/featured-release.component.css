@@ -1,12 +1,13 @@
-
-.container{
-  padding-left: 20px;
+/*
+.bg-feature{
+  margin-top: -45px;
 }
 
 
 
+
 .featured-text{
-  color: aqua;
+  color: rgb(32, 28, 102);
   z-index: 2;
   position: relative;
 }
@@ -15,7 +16,7 @@
   color: aqua;
   z-index: 1;
   position: relative;
-  background-color: #191919;
+  background-color: #928484;
   border-radius: 30px;
   width: 100px;
   cursor: pointer;
@@ -23,4 +24,86 @@
 
 .bg-feature{
   background-color: #191919;
+} */
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  color: white;
+  background-color:#191919;
 }
+
+.item{
+  border-radius: 15px;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  transition: 0.5s ease;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.item .avatar{
+  display: block;
+  margin: 20px 0 0 20px;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow:0 10px 10px, #7e878d;
+}
+
+.item .artist-text{
+  text-align: center;
+
+}
+
+.release-text{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-top: 10px;
+}
+
+.artist-text p{
+  text-align: center;
+  align-items: center;
+}
+
+#list{
+  display: flex;
+  width: max-content;
+  align-items: center;
+}
+
+#formList{
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+  margin: 0;
+}
+
+#formList::-webkit-scrollbar{
+  display: none;
+}
+
+@media screen and (max-width:1024px) {
+  .item{
+    width: calc(33.3vw - 20px);
+  }
+}
+
+@media screen and (max-width:768px) {
+  .item{
+    width: calc(50vw - 20px);
+  }
+}
+
+
+
+
+
+

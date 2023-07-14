@@ -59,8 +59,8 @@ text-decoration:none;
 transform:translateZ(0) scale(1,1);
 transition:all .1s linear;
 transition:all .1s linear;
-
 }
+
 
 .main-menu .nav-icon {
 position:relative;
@@ -141,4 +141,20 @@ height: 100%;
   margin: 20px;
   background-color: #e2e2e2;
   color: #000000;
+}
+
+@media screen and (max-width:1024px) {
+  .main-menu{
+    width: calc(33.3vw - 20px);
+    background-color: #000000;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .has-subnav{
+  width: 40px;
+  background-color: #000000;
+  font-size: 12px;
+}
 }

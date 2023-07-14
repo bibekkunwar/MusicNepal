@@ -10,6 +10,7 @@ import { FeaturedReleaseComponent } from './homepage/featured-release/featured-r
 import { LatestVideosComponent } from './homepage/latestVideos/latestVideos.component';
 import { FeaturedArtistsComponent } from './homepage/featuredArtists/featuredArtists.component';
 import { LatestNewsComponent } from './homepage/latestNews/latestNews.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LatestNewsComponent } from './homepage/latestNews/latestNews.component'
     FeaturedReleaseComponent,
     LatestVideosComponent,
     FeaturedArtistsComponent,
-    LatestNewsComponent
+    LatestNewsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
