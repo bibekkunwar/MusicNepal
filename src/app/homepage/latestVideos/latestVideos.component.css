@@ -7,7 +7,7 @@
 
 
 .latestVideos{
-  background-color: #191919;
+  background-color: black;
   padding-left: 20px;
 }
 .container {
@@ -24,7 +24,7 @@
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 75%; /* 16:9 aspect ratio (56.25% for 16:9, 75% for 4:3) */
+  padding-bottom: 75%;
   height: 0;
 }
 
@@ -139,6 +139,40 @@ right side of youtube video cards
 }
 
 
+.homeVideo{
+  display: flex;
+  grid-template-columns: auto auto auto auto ;
+  gap: 2rem;
+}
+
+.homeVideo .left-side{
+  width: 100%;
+  grid-column: 1/ 4;
+}
 
 
+.right-side{
+  width: 100%;
+}
+
+
+.right-side img{
+  padding: 8px;
+}
+
+
+::ng-deep .owl-prev{
+  position: absolute;
+  top: 50%;
+  left:2%;
+  background-color: black;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+::ng-deep .owl-next{
+  position: absolute;
+  top: 50%;
+  right:0;
+  transform: translateY(-50%) translateX(-50%);
+}
 

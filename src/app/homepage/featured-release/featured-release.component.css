@@ -1,30 +1,3 @@
-/*
-.bg-feature{
-  margin-top: -45px;
-}
-
-
-
-
-.featured-text{
-  color: rgb(32, 28, 102);
-  z-index: 2;
-  position: relative;
-}
-
-.featured-button{
-  color: aqua;
-  z-index: 1;
-  position: relative;
-  background-color: #928484;
-  border-radius: 30px;
-  width: 100px;
-  cursor: pointer;
-}
-
-.bg-feature{
-  background-color: #191919;
-} */
 
 *{
   box-sizing: border-box;
@@ -32,46 +5,95 @@
   margin: 0;
   width: 100%;
   color: white;
-  background-color:#191919;
+  background-color: black;
+}
+.container{
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  /* background-image: url('/assets/releaseBackground.jpg'); */
+  background-color: black;
 }
 
 .item{
-  border-radius: 15px;
-  width: 300px;
-  height: 400px;
-  overflow: hidden;
-  transition: 0.5s ease;
-  margin: 0;
+  border-radius: 10px;
+  height: fit-content;
   align-items: center;
   justify-content: center;
+  margin-left: 8px;
+  padding: 10px;
+}
+
+.item:hover{
+transform: scaleY(1.5px);
+}
+
+.release-head{
+  display: flex;
+  justify-content: space-around;
+  padding: 1.2rem;
+}
+
+.release-head .head-right{
+  width: 100px;
+  color: rgb(12, 10, 10);
+  border-radius: 20px;
+}
+
+.head-right button{
+  text-align: center;
+  background-color: rgb(227, 55, 55);
+  color: black;
+  padding: 5px;
+}
+
+.head-right button:hover{
+  transition: 0.3s ease;
+  background: rgb(149, 42, 42);
+  color: white;
 }
 
 .item .avatar{
   display: block;
-  margin: 20px 0 0 20px;
+  margin: 7px;
   width: 200px;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow:0 10px 10px, #7e878d;
+}
+
+.item .avatar:hover{
+  width: 210px;
+  height: 210px;
+  margin: 1px;
+  transition: 0.2s ease;
+}
+
+.play{
+  font-size: 35px;
+  width: 100%;
+  margin: auto;
 }
 
 .item .artist-text{
   text-align: center;
+  padding: 0;
 
 }
 
 .release-text{
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 1rem;
   padding-top: 10px;
 }
 
-.artist-text p{
-  text-align: center;
-  align-items: center;
-}
+.artist-text >p{
+  display: flex;
+  flex-direction: column;
+width: auto;
+margin: auto;}
 
 #list{
   display: flex;
@@ -80,19 +102,23 @@
 }
 
 #formList{
-  width: 100%;
-  max-width: 100%;
-  overflow: auto;
-  margin: 0;
+  width: 90%;
+  overflow: hidden;
+  height: 350px;
+  margin: 0 ;
 }
 
+
+
 #formList::-webkit-scrollbar{
-  display: none;
+  display:none;
 }
+
+
 
 @media screen and (max-width:1024px) {
   .item{
-    width: calc(33.3vw - 20px);
+    width: calc(33.3vw - 40px);
   }
 }
 
@@ -100,6 +126,23 @@
   .item{
     width: calc(50vw - 20px);
   }
+}
+
+
+
+::ng-deep .owl-prev{
+  position: absolute;
+  top: 50%;
+  left:2%;
+  background-color: black;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+::ng-deep .owl-next{
+  position: absolute;
+  top: 50%;
+  right:0;
+  transform: translateY(-50%) translateX(-50%);
 }
 
 

@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  height: 100vh; /* Adjust the height as per your requirements */
+  height: 100vh;
 }
 
 .navbar {
@@ -8,20 +8,20 @@
   left: 0;
   top: 0;
   height: 100%;
-  /* Adjust the width as per your requirements */
-  background-color: #f1f1f1; /* Adjust the background color as desired */
-  z-index: 1;
+  margin: auto;
+  width: auto;
+  background-color: #f1f1f1;
 }
 
-.banner, .featured_release, .latestVideos, .featuredArtists, .latestNews, .footer {
+
+
+.banner, .featured_release, .latestVideos, .featuredArtists, .latestNews, .mnintro , .footer {
   flex-grow: 1;
-  margin:0 0 0 210px; /* Adjust the margin as per your requirements */
+  margin:0 0 0 250px;
   width: auto;
 }
 
-.featured_release, .latestVideos, .featuredArtists, .latestNews, .footer{
-  padding-left: 30px;
-}
+
 
 
 

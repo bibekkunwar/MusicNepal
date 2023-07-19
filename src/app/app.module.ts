@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,14 @@ import { FeaturedArtistsComponent } from './homepage/featuredArtists/featuredArt
 import { LatestNewsComponent } from './homepage/latestNews/latestNews.component';
 import { FooterComponent } from './footer/footer.component';
 
+
+import { HomeServiceService } from './homepage/services/home-service.service';
+
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MnIntroComponent } from './homepage/mnIntro/mnIntro.component';
+import { SidebarComponent } from './layouts/sidebar/sidebar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +32,21 @@ import { FooterComponent } from './footer/footer.component';
     LatestVideosComponent,
     FeaturedArtistsComponent,
     LatestNewsComponent,
-    FooterComponent
+    FooterComponent,
+    MnIntroComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CarouselModule,
+    BrowserAnimationsModule
+
   ],
-  providers: [],
+  providers: [
+    HomeServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
