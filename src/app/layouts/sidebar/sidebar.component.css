@@ -1,13 +1,30 @@
+.main{
+  display: flex;
+  flex-direction: row;
+}
 
+/*
+/*
 .sidebar {
   margin: 0;
   padding: 0;
   width: 200px;
   background-color: #f1f1f1;
-  position: fixed;
   height: 100%;
   overflow: auto;
-}
+} */ */
+
+/* /* The `.sidebar` CSS class is defining the styling for a sidebar element. */
+.sidebar{
+  margin: 30px;
+  padding: 0;
+  float: left;
+  width: 200px;
+  position: relative;
+  height: 100%;
+  text-align: left;
+  margin-right: -30px;
+} */
 
 .sidebar a {
   display: block;
@@ -27,7 +44,7 @@
 }
 
 div.content {
-  margin-left: 200px;
+  margin-left: 235px;
   padding: 1px 16px;
   height: 1000px;
 }

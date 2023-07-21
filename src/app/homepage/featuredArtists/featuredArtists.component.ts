@@ -15,7 +15,7 @@ export class FeaturedArtistsComponent {
     pullDrag: false,
     dots: false,
     navSpeed: 600,
-    navText: ['&#8249', '&#8250;'],
+    navText: ['<i class="fa-solid fa-circle-chevron-left"></i>', '<i class="fa-solid fa-circle-chevron-right"></i>'],
     responsive: {
       0: {
         items: 1
@@ -27,7 +27,7 @@ export class FeaturedArtistsComponent {
         items: 3
       },
       1000: {
-        items: 4
+        items: 6
       }
     },
     nav: true

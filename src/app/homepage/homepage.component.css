@@ -1,25 +1,26 @@
-.container {
-  display: flex;
-  height: 100vh;
-}
 
-.navbar {
+
+
+
+.navbar{
   position: fixed;
   left: 0;
   top: 0;
-  height: 100%;
-  margin: auto;
-  width: auto;
-  background-color: #f1f1f1;
+  height: 100vh;
+  width: 40px;
+  z-index: 9999999;
+background-color: #716868;
 }
-
 
 
 .banner, .featured_release, .latestVideos, .featuredArtists, .latestNews, .mnintro , .footer {
   flex-grow: 1;
-  margin:0 0 0 250px;
-  width: auto;
+  margin-left: 40px;
+  z-index: 0;
 }
+
+
+
 
 
 

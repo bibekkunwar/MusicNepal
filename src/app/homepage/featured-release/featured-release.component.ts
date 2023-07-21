@@ -14,7 +14,7 @@ export class FeaturedReleaseComponent {
     pullDrag: false,
     dots: false,
     navSpeed: 700,
-    navText: ['<i class="fa-sharp fa-solid fa-circle-left fa-lg" ></i>', '<i class="fa-sharp fa-solid fa-circle-right fa-lg"></i>'],
+    navText: ['<i class="fa-solid fa-circle-chevron-left"></i>', '<i class="fa-solid fa-circle-chevron-right"></i>'],
     responsive: {
       0: {
         items: 1

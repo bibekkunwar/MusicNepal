@@ -15,23 +15,45 @@
 }
 
 .banner-text button{
-
-  background-color: rgb(208, 100, 100);
   border-radius: 20px;
-  border: 0px;
+  border: none;
   padding:10px 20px 10px 20px;
-  font-size: 18px;
-  font-family: 'monserrat';
+  font-size: 14px;
+  font-family: inherit;
+
 }
 
-.banner-text button:hover{
-  font-size: 20px;
-  transition: 1s ease-in-out;
-}
 
-.carousel-control-prev, carousel-control-next{
+.carousel-control-prev{
   position: absolute;
   left: -5px;
+  top: 70%;
+}
+
+.carousel-control-next{
+  position: absolute;
+  top: 70%;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 10px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+
+.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover {
+  background-color: rgba(0,0,0,.6);
+}
+
+
+
+.carousel-indicators{
+  position: absolute;
+top: 85%;
 }
 
 
@@ -42,7 +64,6 @@
 .button-container {
   position: relative;
   text-align: center;
-  color: white;
 
 }
 
@@ -50,15 +71,19 @@
 .bottom-left {
   position: absolute;
   font-size: 18px;
-  bottom: 100px;
+  bottom: 150px;
   border-radius: 20px;
-    background-color: rgb(240, 52, 52);
-    transition-duration: 0.8s ease;
-  left: 120px;
-  padding: 7px;
+  border: none;
+  background-color: #ed4036;
+  left: 100px;
+  padding: 7px 15px;
+  transition: all 0.3s ease;
+
 }
 
 .bottom-left:hover{
-  background-color: rgb(183, 37, 23);
+  background-color: #d5170d;
 }
+
+
 

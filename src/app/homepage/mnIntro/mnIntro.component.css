@@ -1,25 +1,24 @@
-.container, .container2 {
-  max-width: 100%;
+.mnip, .momo {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background-color: black;
 }
 
 /* Text content on the left side */
 .text {
   flex: 1;
-  padding-right: 10px;
-
 }
 
 .text button{
   margin: auto;
   width: auto;
-  background-color: red;
-  padding: 5px;
+  border-radius: 30px;
+  background-color: #ed4036;
+  padding: 8px 15px;
 }
 
 
@@ -27,7 +26,7 @@
 /* Image on the right side */
 .image {
   flex: 1;
-  padding-left: 10px;
+  padding-left: 5px;
   max-width: 100%;
   height: auto;
 }

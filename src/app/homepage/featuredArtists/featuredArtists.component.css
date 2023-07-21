@@ -1,25 +1,28 @@
-/* @import "https://unpkg.com/open-props"; */
-/* @import "https://unpkg.com/open-props/normalize.min.css"; */
 
 .featured-artist{
   box-sizing: border-box;
-  padding: 10px;
-  margin: 0;
-  background-color: black;
+  background-color: #151515;
 }
+
 
 .media-element{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom:0 15px 2rem 15px;
+  align-items: center;
+  padding-bottom:0 15px 0 15px;
+  transition: all 0.6s ease;
+}
+
+.media-element:hover{
+  transform: scale(1.07);
 }
 
 .media-element > img {
   border-radius: 50% ;
-  padding: 30px;
-  height: 280px;
-  width: 280px;
+  padding: 10px;
+  height: 200px;
+  width: 200px;
   object-fit: cover;
 
 }
@@ -29,25 +32,27 @@
 }
 
 .artist_title{
+  padding: 10px;
   display: flex;
+  font-size: 30px;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.artist_title_text {
-  float: left;
-  padding: 10px;
-}
 
-.artistButton {
-  margin-right: 20px;
-}
+
 
 .artistButton button{
-  background-color: red;
-  padding: 4px;
+  background-color: #4c4444;;
+  padding: 7px 15px;
   color: white;
-  border-radius: 10px; ;
+  border-radius: 10px;
+  border-color:transparent;
+  border: 1px solid transparent;
+
+  text-align: center;
+
+  font-weight: 400;
 }
 
 
@@ -66,6 +71,6 @@
 }
 
 .page-title {
-  font-size: var(--font-size-fluid-3);
+  font-size: var(--font-size-3);
 }
 
