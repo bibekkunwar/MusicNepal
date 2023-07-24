@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HomeServiceService } from '../services/home-service.service';
 
 @Component({
-  selector: 'app-featured-release',
-  templateUrl: './featured-release.component.html',
-  styleUrls: ['./featured-release.component.css']
+  selector: 'app-latestRelease',
+  templateUrl: './latestRelease.component.html',
+  styleUrls: ['./latestRelease.component.css']
 })
-export class FeaturedReleaseComponent {
+export class LatestReleaseComponent implements OnInit {
+
   customOptions: OwlOptions = {
     loop: false,
     mouseDrag: true,
@@ -27,11 +28,12 @@ export class FeaturedReleaseComponent {
         items: 3
       },
       940: {
-        items: 6
+        items: 3
       }
     },
     nav: true
   }
+
 
 
   // banner images from api
@@ -64,5 +66,6 @@ export class FeaturedReleaseComponent {
       }
     );
   }
+
 
 }

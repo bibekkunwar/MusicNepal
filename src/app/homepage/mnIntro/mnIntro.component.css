@@ -20,9 +20,13 @@
 .text button{
   margin: auto;
   width: auto;
-  border-radius: 30px;
-  background-color: #ed4036;
-  padding: 8px 15px;
+  padding: 5px 15px;
+  border: 1px solid white transparent;
+  text-align: center;
+  border-color: rgba(169, 156, 156, 0.6);
+  border-radius: 20px;
+  color: white;
+  font-weight: 400;
 }
 
 

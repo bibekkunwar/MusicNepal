@@ -9,10 +9,12 @@ import { HomeBannerComponent } from './homepage/home-banner/home-banner.componen
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FeaturedReleaseComponent } from './homepage/featured-release/featured-release.component';
+import { LatestReleaseComponent } from './homepage/latestRelease/latestRelease.component';
 import { LatestVideosComponent } from './homepage/latestVideos/latestVideos.component';
 import { FeaturedArtistsComponent } from './homepage/featuredArtists/featuredArtists.component';
 import { LatestNewsComponent } from './homepage/latestNews/latestNews.component';
 import { FooterComponent } from './footer/footer.component';
+import { CommonModule } from '@angular/common';
 
 
 import { HomeServiceService } from './homepage/services/home-service.service';
@@ -29,6 +31,7 @@ import { SidebarComponent } from './layouts/sidebar/sidebar.component';
     NavBarComponent,
     HomepageComponent,
     FeaturedReleaseComponent,
+    LatestReleaseComponent,
     LatestVideosComponent,
     FeaturedArtistsComponent,
     LatestNewsComponent,
@@ -38,6 +41,7 @@ import { SidebarComponent } from './layouts/sidebar/sidebar.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
     CarouselModule,

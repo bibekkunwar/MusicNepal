@@ -1,8 +1,17 @@
 
 .featured-artist{
   box-sizing: border-box;
-  background-color: #151515;
+  background-color: black;
   padding-left: 25px;
+}
+
+.btn-artist{
+  text-align: center;
+  border-color: rgba(169, 156, 156, 0.6);
+  border-radius: 20px;
+  color: white;
+  font-weight: 400;
+  padding: 5px;
 }
 
 
@@ -33,27 +42,30 @@
 }
 
 .artist_title{
-  padding: 10px;
+  padding: 5px;
   display: flex;
-  font-size: 30px;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.artist_title_text{
+  font-size: 30px;
 }
 
 
 
 
 .artistButton button{
-  background-color: #4c4444;;
-  padding: 7px 15px;
-  color: white;
-  border-radius: 10px;
-  border-color:transparent;
-  border: 1px solid transparent;
+  padding: 5px 15px;
+  border: 1px solid white transparent;
+
 
   text-align: center;
-
+  border-color: rgba(169, 156, 156, 0.6);
+  border-radius: 20px;
+  color: white;
   font-weight: 400;
+
 }
 
 
@@ -75,3 +87,9 @@
   font-size: var(--font-size-3);
 }
 
+
+.owl-nav .owl-prev {
+  position: absolute;
+  left: 1px !important;
+  top: 50%;
+}

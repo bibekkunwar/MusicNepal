@@ -1,0 +1,73 @@
+<div class="w-100" style="background-color: black;">
+
+  <div class="container custom-container">
+    <div class="news_title">
+      <div class="news_title_text">
+        <p>Latest Releases</p>
+      </div>
+      <div class="newsButton">
+        <button class="btn"> View All</button>
+      </div>
+    </div>
+    <div class="row">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let items of bannerItems">
+          <div class="column">
+        <img src="{{items.background}}" alt="Snow" style="width:100%">
+        <!-- <p>News title goes here Fully</p> -->
+      </div>
+        </ng-template>
+        <!-- <ng-template carouselSlide>
+          <div class="column">
+        <img src="assets/homeBanner.jpg" alt="Snow" style="width:100%">
+        <p>News title goes here Fully</p>
+      </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="column">
+        <img src="assets/homeBanner.jpg" alt="Snow" style="width:100%">
+        <p>News title goes here Fully</p>
+      </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="column">
+        <img src="assets/homeBanner.jpg" alt="Snow" style="width:100%">
+        <p>News title goes here Fully</p>
+      </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="column">
+        <img src="assets/homeBanner.jpg" alt="Snow" style="width:100%">
+        <p>News title goes here Fully</p>
+      </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="column">
+        <img src="assets/homeBanner.jpg" alt="Snow" style="width:100%">
+        <p>News title goes here Fully</p>
+      </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="column">
+        <img src="assets/homeBanner.jpg" alt="Snow" style="width:100%">
+        <p>News title goes here Fully</p>
+      </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="column">
+        <img src="assets/homeBanner.jpg" alt="Snow" style="width:100%">
+        <p>News title goes here Fully</p>
+      </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="column">
+        <img src="assets/homeBanner.jpg" alt="Snow" style="width:100%">
+        <p>News title goes here Fully</p>
+      </div>
+        </ng-template> -->
+    </owl-carousel-o>
+    </div>
+  </div>
+
+
+</div>

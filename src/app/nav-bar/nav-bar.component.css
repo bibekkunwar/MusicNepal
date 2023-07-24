@@ -15,7 +15,7 @@ color: white}
 
 .main-menu {
 position:fixed;
-font-size: 3rem;
+font-size: 2rem;
 top:0;
 bottom:0;
 height:100%;
@@ -76,7 +76,7 @@ font-size:15px;
 position:relative;
 display:table-cell;
 vertical-align:middle;
-margin-left: 8px;
+margin-left: 3px;
 font-family: 'Poppins';
 }
 .main-menu .nav-text:hover{
@@ -130,8 +130,8 @@ padding:5px;
 
 
 #search{
-  font-size: 14px;
-  width: 50%;
+  font-size: 12px;
+  width: 40%;
   border-radius: 30px;
   border: none;
   padding: 2px;
@@ -153,9 +153,9 @@ padding:5px;
 
 @media screen and (max-width:1024px) {
   .main-menu{
-    width: calc(33.3vw - 20px);
+    width:60px;
     background-color: #000000;
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 

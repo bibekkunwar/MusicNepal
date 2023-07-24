@@ -7,13 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class HomeServiceService {
 
-  constructor(private http:HttpClient) { }
-
   homeUrl = "https://mnm.truestreamz.com/api/v1/musicnepal/home";
 
 
-  bannerImage():Observable<any> {
-    return this.http.get(this.homeUrl);
+  constructor(private http:HttpClient) { }
+
+
+
+  bannerImage():Observable<any[]> {
+    return this.http.get<any[]>(this.homeUrl);
   }
 
 }

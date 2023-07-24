@@ -5,164 +5,23 @@
         <h2>Released Features</h2>
       </div>
       <div class="head-right">
-        <button class="head-right">View All</button>
+        <button class="btn head-right">View All</button>
       </div>
     </div>
 
     <div class="position-relatvie">
       <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide>
+        <ng-template carouselSlide *ngFor=" let item of bannerItems">
           <div class="item">
             <img
               class="avatar shadow-drop-2-center"
-              src="assets/homeBanner.jpg"
+              src="{{item.background}}"
               alt=""
             />
             <div class="release-text">
               <div class="artist-text">
                 <p>
-                  hero 101 <br />
-                  Songs name
-                </p>
-              </div>
-              <div class="play">
-                <i class="fa-sharp fa-regular fa-circle-play"></i>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="item">
-            <img
-              class="avatar shadow-drop-2-center"
-              src="assets/homeBanner.jpg"
-              alt=""
-            />
-            <div class="release-text">
-              <div class="artist-text">
-                <p>
-                  hero 101 <br />
-                  Songs name
-                </p>
-              </div>
-              <div class="play">
-                <i class="fa-sharp fa-regular fa-circle-play"></i>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="item">
-            <img
-              class="avatar shadow-drop-2-center"
-              src="assets/homeBanner.jpg"
-              alt=""
-            />
-            <div class="release-text">
-              <div class="artist-text">
-                <p>
-                  hero 101 <br />
-                  Songs name
-                </p>
-              </div>
-              <div class="play">
-                <i class="fa-sharp fa-regular fa-circle-play"></i>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-
-        <ng-template carouselSlide>
-          <div class="item">
-            <img
-              class="avatar shadow-drop-2-center"
-              src="assets/homeBanner.jpg"
-              alt=""
-            />
-            <div class="release-text">
-              <div class="artist-text">
-                     <p>
-                  hero 101 <br />
-                  Songs name
-                </p>
-              </div>
-              <div class="play">
-                <i class="fa-sharp fa-regular fa-circle-play"></i>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="item">
-            <img
-              class="avatar shadow-drop-2-center"
-              src="assets/homeBanner.jpg"
-              alt=""
-            />
-            <div class="release-text">
-              <div class="artist-text">
-                     <p>
-                  hero 101 <br />
-                  Songs name
-                </p>
-              </div>
-              <div class="play">
-                <i class="fa-sharp fa-regular fa-circle-play"></i>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="item">
-            <img
-              class="avatar shadow-drop-2-center"
-              src="assets/homeBanner.jpg"
-              alt=""
-            />
-            <div class="release-text">
-              <div class="artist-text">
-                     <p>
-                  hero 101 <br />
-                  Songs name
-                </p>
-              </div>
-              <div class="play">
-                <i class="fa-sharp fa-regular fa-circle-play"></i>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="item">
-            <img
-              class="avatar shadow-drop-2-center"
-              src="assets/homeBanner.jpg"
-              alt=""
-            />
-            <div class="release-text">
-              <div class="artist-text">
-                     <p>
-                  hero 101 <br />
-                  Songs name
-                </p>
-              </div>
-              <div class="play">
-                <i class="fa-sharp fa-regular fa-circle-play"></i>
-              </div>
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="item">
-            <img
-              class="avatar shadow-drop-2-center"
-              src="assets/homeBanner.jpg"
-              alt=""
-            />
-            <div class="release-text">
-              <div class="artist-text">
-                     <p>
-                  hero 101 <br />
+                  {{item.title}}<br />
                   Songs name
                 </p>
               </div>

@@ -1,40 +1,17 @@
-/* The provided CSS code is defining the styles for a footer section of a webpage. Here is a breakdown
-of what each part of the code does: */
-/* The CSS code provided is defining the styles for a footer section of a webpage. Here is a breakdown
-of what each part of the code does: */
-
-
-/* Adjust the positioning and size of the video */
-.footer-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Make sure the container is relative for positioning the video */
-.footer-img {
-  position: relative;
-  width: 100%; /* Set the width of the footer-img to cover the full width */
-  height: 300px; /* Set the height of the footer-img as per your requirement */
-  /* Add other styles for the footer-img if needed */
-}
-
-
 
 .footer-links,
 .social-links {
   list-style: none;
   padding: 0;
   margin: 20px 0 0 0;
+  color: #fff;
 }
 
 .footer-links li
  {
   display: inline-block;
   margin: 0 10px;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -45,13 +22,12 @@ of what each part of the code does: */
 }
 
 .footer-links li :hover {
-  color: aquamarine;
+  color: white;
 }
 
 .footer-links li a,
 .social-links li a {
   text-decoration: none;
-  color: black;
 }
 
 .footer-links li ,
@@ -60,7 +36,9 @@ of what each part of the code does: */
   color: rgb(198, 60, 21);
 }
 
-
+a{
+  color: white;
+}
 
 
 .footer-content {
@@ -130,9 +108,6 @@ margin: 20px 15px 20px 0 ;
     flex-wrap: wrap;
     flex-direction: row;
   }
-
-
-
 
   .container .footer-links{
     display: flex;
