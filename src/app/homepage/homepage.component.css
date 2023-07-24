@@ -1,7 +1,5 @@
 
 
-
-
 .navbar{
   position: fixed;
   left: 0;
@@ -9,16 +7,8 @@
   height: 100vh;
   width: 40px;
   z-index: 9999999;
-background-color: #716868;
+  background-color: #3d3535;
 }
-
-
-.banner, .featured_release, .latestVideos, .featuredArtists, .latestNews, .mnintro , .footer {
-  flex-grow: 1;
-  margin-left: 40px;
-  z-index: 0;
-}
-
 
 
 

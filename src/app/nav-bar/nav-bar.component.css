@@ -11,7 +11,7 @@ height: 30px;
 padding-left: 0;
 vertical-align: middle;
 font-size:20px;
-}
+color: white}
 
 .main-menu {
 position:fixed;
@@ -83,6 +83,10 @@ font-family: 'Poppins';
   color: red;
 }
 
+/* Add the hover effect for the li tag */
+li:hover .fa {
+  color: red; /* Change the icon color to red on hover */
+}
 .main-menu:hover{
   background-color: #433737;
   width: 150px;

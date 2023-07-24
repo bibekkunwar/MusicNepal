@@ -1,3 +1,7 @@
+.container{
+  padding-left: 3em;
+  padding-right: 3em;
+}
 .mnip, .momo {
   width: 100%;
   display: flex;
