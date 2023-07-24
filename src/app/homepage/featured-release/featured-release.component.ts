@@ -36,7 +36,7 @@ export class FeaturedReleaseComponent {
 
   // banner images from api
 
-  bannerItems: any[] = []; // Array to store the banner items from the API
+  albumItems: any[] = []; // Array to store the banner items from the API
 
   constructor(private homeService: HomeServiceService) {}
 
@@ -48,10 +48,10 @@ export class FeaturedReleaseComponent {
     this.homeService.bannerImage().subscribe(
       (data: any) => {
         if (data.status && data.data && Array.isArray(data.data)) {
-          const bannersSection = data.data.find((section: any) => section.name === 'Banners');
+          const bannersSection = data.data.find((section: any) => section.name === 'Albums');
           if (bannersSection && bannersSection.items && Array.isArray(bannersSection.items)) {
-            this.bannerItems = bannersSection.items;
-            console.log('Banner Items:', this.bannerItems);
+            this.albumItems = bannersSection.items;
+            console.log('Banner Items:', this.albumItems);
           } else {
             console.error('Banners section not found in API response:', data);
           }

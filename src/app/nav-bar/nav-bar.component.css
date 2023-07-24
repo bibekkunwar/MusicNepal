@@ -29,13 +29,14 @@ transition: .7s ease ;
 .logo{
 text-align: center;
 display: flex;
-width: 70px;
+width: 50px;
 }
 
 .logo img{
-  width: 80px;
-  height: 65px;
+  width: 70px;
+  height: 60px;
   align-items: center;
+  padding-right: 3px;
   border-radius: 50%;
 }
 

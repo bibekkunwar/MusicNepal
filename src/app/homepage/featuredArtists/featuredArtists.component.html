@@ -5,121 +5,23 @@
         <p>Featured Artists</p>
       </div>
       <div class="artistButton">
-        <button class="btn-artist"> View All</button>
+        <button class="btn btn-artist"> View All</button>
       </div>
     </div>
 
     <div class="media-scroller">
       <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide="">
+        <ng-template carouselSlide *ngFor="let items of artistsItems">
           <div class="media-element">
             <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
+              src="{{items.logo}}"
               alt=""
             />
-            <p class="title">Short title</p>
+            <p class="title">{{items.title}}</p>
           </div>
         </ng-template>
 
-        <ng-template carouselSlide="">
-          <div class="media-element">
-            <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
-              alt=""
-            />
-            <p class="title">Short title</p>
-          </div>
-        </ng-template>
 
-        <ng-template carouselSlide="">
-          <div class="media-element">
-            <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
-              alt=""
-            />
-            <p class="title">Short title</p>
-          </div>
-        </ng-template>
-
-        <ng-template carouselSlide="">
-          <div class="media-element">
-            <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
-              alt=""
-            />
-            <p class="title">Short title</p>
-          </div>
-        </ng-template>
-
-        <ng-template carouselSlide="">
-          <div class="media-element">
-            <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
-              alt=""
-            />
-            <p class="title">Short title</p>
-          </div>
-        </ng-template>
-
-        <ng-template carouselSlide="">
-          <div class="media-element">
-            <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
-              alt=""
-            />
-            <p class="title">Short title</p>
-          </div>
-        </ng-template>
-
-        <ng-template carouselSlide="">
-          <div class="media-element">
-            <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
-              alt=""
-            />
-            <p class="title">Short title</p>
-          </div>
-        </ng-template>
-
-        <ng-template carouselSlide="">
-          <div class="media-element">
-            <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
-              alt=""
-            />
-            <p class="title">Short title</p>
-          </div>
-        </ng-template>
-
-        <ng-template carouselSlide="">
-          <div class="media-element">
-            <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
-              alt=""
-            />
-            <p class="title">Short title</p>
-          </div>
-        </ng-template>
-
-        <ng-template carouselSlide="">
-          <div class="media-element">
-            <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
-              alt=""
-            />
-            <p class="title">Short title</p>
-          </div>
-        </ng-template>
-
-        <ng-template carouselSlide="">
-          <div class="media-element">
-            <img
-              src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400"
-              alt=""
-            />
-            <p class="title">Short title</p>
-          </div>
-        </ng-template>
       </owl-carousel-o>
     </div>
   </div>
