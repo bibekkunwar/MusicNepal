@@ -7,7 +7,7 @@ import { HomeServiceService } from '../services/home-service.service';
   templateUrl: './featuredArtists.component.html',
   styleUrls: ['./featuredArtists.component.css']
 })
-export class FeaturedArtistsComponent {
+export class FeaturedArtistsComponent implements OnInit {
 
   customOptions: OwlOptions = {
     loop: false,

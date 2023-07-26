@@ -9,6 +9,13 @@
   justify-content: space-between;
 }
 
+.side-videos{
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 8px;
+}
+
 .column {
   width: 50%;
   height: 80vh;
@@ -40,11 +47,13 @@
 
 .homeVideo .left-side{
   width: 100%;
+  cursor: pointer;
   grid-column: 1/ 4;
 }
 
 
 .right-side{
+  display: grid;
   width: 100%;
 }
 
@@ -54,22 +63,8 @@
 
 
 .right-side img{
-  padding: 8px;
+  padding: 10px;
 }
 
 
-::ng-deep .owl-prev{
-  position: absolute;
-  top: 50%;
-  left:2%;
-  background-color: black;
-  transform: translateY(-50%) translateX(-50%);
-}
-
-::ng-deep .owl-next{
-  position: absolute;
-  top: 50%;
-  right:0;
-  transform: translateY(-50%) translateX(-50%);
-}
 

@@ -23,6 +23,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MnIntroComponent } from './homepage/mnIntro/mnIntro.component';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
+import { YoutubeApiService } from './services/youtube-api.service';
 
 @NgModule({
   declarations: [
@@ -45,11 +46,11 @@ import { SidebarComponent } from './layouts/sidebar/sidebar.component';
     AppRoutingModule,
     HttpClientModule,
     CarouselModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
   ],
   providers: [
-    HomeServiceService
+    HomeServiceService,
+    YoutubeApiService
   ],
   bootstrap: [AppComponent]
 })
