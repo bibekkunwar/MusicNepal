@@ -8,7 +8,6 @@
         <button class="btn btn-artist"> View All</button>
       </div>
     </div>
-
     <div class="media-scroller">
       <owl-carousel-o [options]="customOptions">
         <ng-template carouselSlide *ngFor="let items of artistsItems">
@@ -20,10 +19,7 @@
             <p class="title">{{items.title}}</p>
           </div>
         </ng-template>
-
-
       </owl-carousel-o>
     </div>
   </div>
-
 </div>

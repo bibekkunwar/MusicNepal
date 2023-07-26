@@ -5,15 +5,22 @@
   padding-left: 25px;
 }
 
+
 .btn-artist{
   background-color: black;
   text-align: center;
-  border: white;
+  border: 1px solid white;
   border-color: rgba(169, 156, 156, 0.6);
-  border-radius: 20px;
+  border-radius: 15px;
   color: white;
   font-weight: 400;
-  padding: 5px;
+  padding: 5px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btn-artist:hover{
+  background-color: #d5170d;
 }
 
 
@@ -24,6 +31,7 @@
   align-items: center;
   padding-bottom:0 15px 0 15px;
   transition: all 0.6s ease;
+  cursor: pointer;
 }
 
 .media-element:hover{
@@ -54,40 +62,6 @@
   font-size: 30px;
 }
 
-
-
-
-.artistButton button{
-  padding: 5px 15px;
-  border: 1px solid white transparent;
-
-
-  text-align: center;
-  border-color: rgba(169, 156, 156, 0.6);
-  border-radius: 20px;
-  color: white;
-  font-weight: 400;
-
-}
-
-
-/* general styling */
-
-
-
-
-
-/* The `.page-header` class is defining the styling for a page header element. */
-.page-header {
-  padding-top: var(--size-6) ;
-  background: black;
-  color: var(--gray-0);
-  box-shadow: var(--shadow-2);
-}
-
-.page-title {
-  font-size: var(--font-size-3);
-}
 
 
 .owl-nav .owl-prev {

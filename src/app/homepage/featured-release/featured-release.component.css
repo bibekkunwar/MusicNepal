@@ -5,6 +5,7 @@
   margin-left: 8px;
   padding: 10px;
   transition: all 0.6s ease;
+  cursor: pointer;
 }
 
 .item:hover {
@@ -28,6 +29,12 @@
   color: white;
   font-weight: 400;
   padding: 5px;
+  cursor: pointer;
+}
+
+.head-right button:hover{
+  background-color: #d5170d;
+
 }
 
 
@@ -49,6 +56,7 @@
   justify-content: space-between;
   padding-top: 10px;
 }
+
 
 .artist-text > p {
   display: flex;
@@ -110,3 +118,4 @@
   }
 }
  */
+

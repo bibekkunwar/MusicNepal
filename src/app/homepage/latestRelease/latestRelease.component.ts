@@ -7,7 +7,7 @@ import { HomeServiceService } from '../services/home-service.service';
   templateUrl: './latestRelease.component.html',
   styleUrls: ['./latestRelease.component.css']
 })
-export class LatestReleaseComponent implements OnInit {
+export class LatestReleaseComponent {
 
   customOptions: OwlOptions = {
     loop: false,
@@ -36,14 +36,13 @@ export class LatestReleaseComponent implements OnInit {
 
 
 
-  // banner images from api
 
-  bannerItems: any[] = []; // Array to store the banner items from the API
+  bannerItems: any[] = [];
 
   constructor(private homeService: HomeServiceService) {}
 
   ngOnInit(): void {
-    this.getBannerItems(); // Fetch banner items from the API when the component initializes
+    this.getBannerItems();
   }
 
   getBannerItems(): void {

@@ -31,16 +31,6 @@
 }
 
 
-@media (max-width:767px) {
-  .team-boxed h2 {
-    margin-bottom:25px;
-    padding-top:25px;
-    font-size:24px;
-  }
-}
-
-
-
 
 .homeVideo{
   display: flex;
@@ -56,6 +46,10 @@
 
 .right-side{
   width: 100%;
+}
+
+.side-video{
+  cursor: pointer;
 }
 
 

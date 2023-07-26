@@ -1,6 +1,7 @@
-
 *{
-  background-color: black;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 .navbar{
   position: fixed;
@@ -9,7 +10,6 @@
   height: 100vh;
   width: 40px;
   z-index: 9999999;
-  background-color: #151515;
 }
 
 

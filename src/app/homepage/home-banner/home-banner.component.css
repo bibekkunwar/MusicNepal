@@ -3,15 +3,33 @@
   width: 100%;
   margin: auto;
 }
+
 .banner-text{
   position: absolute;
   bottom: 100px;
   left: 70px;
 }
 
+.carousel-item {
+  position: relative; /* Ensure the video is positioned relative to this container */
+  width: 100vw; /* Set the width to 100% of the viewport width */
+  height: 100%; /* Set the height to 100% to maintain aspect ratio */
+}
+
+.video-element {
+  width: 100%; /* Set the width to 100% to occupy the full width of the container */
+  display: block; /* Remove any default inline styles that may affect the display */
+}
+
+.carousel-inner video{
+  width: 100%;
+  object-fit: cover;
+}
+
 .carousel-inner img{
   width: 100%;
   height: 70vh;
+  object-fit: cover;
 }
 
 .banner-text button{
@@ -20,7 +38,6 @@
   padding:10px 20px 10px 20px;
   font-size: 14px;
   font-family: inherit;
-
 }
 
 
@@ -55,7 +72,7 @@
 
 .carousel-indicators{
   position: absolute;
-top: 85%;
+  top: 85%;
 }
 
 
