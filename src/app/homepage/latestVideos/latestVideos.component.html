@@ -1,31 +1,41 @@
-<div class="w-100" style="background-color: black">
+<div class="container-fluid w-100" style="background-color: black">
   <div class="latestVideos">
     <div class="latestVideos-text">
       <h2>Latest music videos</h2>
     </div>
 
-    <div class="homeVideo">
-      <div class="left-side" *ngFor="let video of recentVideos; let i=index">
-        <ng-container *ngIf="i==0">
-        <iframe
-        width="560"
-        height="315"
-        [src]="playLink"
-      ></iframe>
-        <h4>{{ video.snippet.title}}</h4>
-      </ng-container>
+    <div class="video">
+      <div class="row">
+        <div class="col-6">
+          <div  *ngFor="let video of recentVideos.slice(0); let i=index">
+            <ng-container *ngIf="i==0">
+            <iframe class="yt-image"
+
+            [src]="playLink"
+          ></iframe>
+            <h6>{{ video.snippet.title}}</h6>
+          </ng-container>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-6"  *ngFor="let video of recentVideos.slice(1,5)">
+              <a class="side-videos "
+              (click)="playVideo(video.snippet.resourceId.videoId)">
+            <img style="width: 100%;"
+              [src]="video.snippet.thumbnails.standard.url"
+              alt="Video Thumbnail"
+            />
+            <h6 class="d-flex justify-content-centre">{{ video.snippet.title }}</h6>
+          </a>
+          </div>
+          </div>
+        </div>
       </div>
 
-      <div class="right-side" *ngFor="let video of recentVideos">
-        <a class="side-videos col-md-6"
-        (click)="playVideo(video.snippet.resourceId.videoId)">
-          <img
-            [src]="video.snippet.thumbnails.default.url"
-            alt="Video Thumbnail"
-          />
-          <h5>{{ video.snippet.title }}</h5>
-        </a>
-      </div>
+
+
     </div>
   </div>
 </div>

@@ -1,0 +1,31 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.head-text{
+  color: white;
+  text-align: center;
+  padding-top:40px; ;
+}
+
+.head-text p,span{
+  color: white;
+}
+.audio-Home{
+  padding-left: 120px;
+}
+
+.searchBar{
+  float: right;
+  right: 40px;
+  padding-top: 40px;
+}
+
+
+.nav-bar{
+  background-color: black;
+  z-index: 1000;
+}

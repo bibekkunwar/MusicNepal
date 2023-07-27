@@ -1,4 +1,4 @@
-import { HomeServiceService } from './../services/home-service.service';
+import { HomeServiceService } from '../../services/homePage/home-service.service';
 import { Component, OnInit } from '@angular/core';
 
 interface BannerItem {
@@ -32,26 +32,14 @@ export class HomeBannerComponent implements OnInit {
   }
 
   getBannerItems(): void {
-    this.homeService.bannerImage().subscribe(
+    this.homeService.getHomeData().subscribe(
       (data: any) => {
-        console.log('API Response:', data);
         if (data.status && data.data && Array.isArray(data.data)) {
           const bannersSection = data.data.find((section: any) => section.name === 'Banners');
           if (bannersSection && bannersSection.items && Array.isArray(bannersSection.items)) {
-            this.bannerItems = bannersSection.items.map((item: any) => ({
-              background: item.background,
-            }));
-            console.log('Mapped Banner Items:', this.bannerItems);
-          } else {
-            console.error('Banners section not found in API response:', data);
+            this.bannerItems = bannersSection.items;
           }
-        } else {
-          console.error('Invalid API response:', data);
-        }
-      },
-      (error) => {
-        console.error('Error fetching data:', error);
-      }
+        }}
     );
   }
 

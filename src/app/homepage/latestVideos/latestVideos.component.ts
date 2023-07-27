@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { YoutubeApiService } from 'src/app/services/youtube-api.service';
+import { YoutubeApiService } from 'src/app/services/youtube/youtube-api.service';
 import { DomSanitizer } from '@angular/platform-browser';
 
 
@@ -32,7 +32,8 @@ export class LatestVideosComponent implements OnInit{
   }
 
   playVideo(videoId: string) {
-    this.playLink = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' +videoId);
+    this.playLink = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' +videoId + '?autoplay=1&mute=1' );
+
     console.log(this.playLink)
   }
 

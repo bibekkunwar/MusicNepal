@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { HomeServiceService } from '../services/home-service.service';
+import { HomeServiceService } from '../../services/homePage/home-service.service';
 
 @Component({
   selector: 'app-latestRelease',
@@ -46,7 +46,7 @@ export class LatestReleaseComponent {
   }
 
   getBannerItems(): void {
-    this.homeService.bannerImage().subscribe(
+    this.homeService.getHomeData().subscribe(
       (data: any) => {
         if (data.status && data.data && Array.isArray(data.data)) {
           const bannersSection = data.data.find((section: any) => section.name === 'Banners');

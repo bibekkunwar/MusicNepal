@@ -1,0 +1,36 @@
+<div class="w-100 pb-5"  style="background-color: black;">
+  <div class="custom-container">
+    <div class="release-head">
+      <div class="head-left">
+        <h2> Others</h2>
+      </div>
+      <div class="head-right">
+        <button class="btn head-right">View All</button>
+      </div>
+    </div>
+
+    <div class="position-relatvie">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor=" let item of otherItems">
+          <div class="item mb-3">
+            <img
+              class="avatar shadow-drop-2-center"
+              src="{{item.logo}}"
+              alt=""
+            />
+            <div class="release-text">
+              <div class="artist-text">
+                <p>
+                  {{item.title}} <br />
+                  {{item.type}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+
+    </div>
+  </div>
+
+</div>

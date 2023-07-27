@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { HomeServiceService } from '../services/home-service.service';
+import { HomeServiceService } from '../../services/homePage/home-service.service';
 
 @Component({
   selector: 'app-featuredArtists',
@@ -43,13 +43,12 @@ export class FeaturedArtistsComponent implements OnInit {
   }
 
    getBannerItems(): void {
-    this.homeService.bannerImage().subscribe(
+    this.homeService.getHomeData().subscribe(
       (data: any) => {
         if (data.status && data.data && Array.isArray(data.data)) {
           const artistsSection = data.data.find((section: any) => section.name === 'Artists');
           if (artistsSection && artistsSection.items && Array.isArray(artistsSection.items)) {
             this.artistsItems = artistsSection.items;
-            console.log('Banner Items:', this.artistsItems);
           } else {
             console.error('Banners section not found in API response:', data);
           }

@@ -14,11 +14,8 @@
               <button>Download MoMo</button>
             </video>
           </div>
-          <div class="carousel-item" data-bs-interval="3000">
-            <img src="assets/homeBanner.jpg" class=" w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="3000">
-            <img src="assets/homeBanner.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-item" data-bs-interval="3000" *ngFor="let item of bannerItems">
+            <img src="{{item.background}}"alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -27,7 +24,6 @@
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
         </button>
          <div class="button-container">
         <button class=" bottom-left">Watch Video Here</button>

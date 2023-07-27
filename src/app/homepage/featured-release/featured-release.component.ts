@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { HomeServiceService } from '../services/home-service.service';
+import { HomeServiceService } from '../../services/homePage/home-service.service';
 
 @Component({
   selector: 'app-featured-release',
@@ -36,22 +36,21 @@ export class FeaturedReleaseComponent {
 
   // banner images from api
 
-  albumItems: any[] = []; // Array to store the banner items from the API
+  albumItems: any[] = [];
 
   constructor(private homeService: HomeServiceService) {}
 
   ngOnInit(): void {
-    this.getBannerItems(); // Fetch banner items from the API when the component initializes
+    this.getBannerItems();
   }
 
   getBannerItems(): void {
-    this.homeService.bannerImage().subscribe(
+    this.homeService.getHomeData().subscribe(
       (data: any) => {
         if (data.status && data.data && Array.isArray(data.data)) {
           const bannersSection = data.data.find((section: any) => section.name === 'Albums');
           if (bannersSection && bannersSection.items && Array.isArray(bannersSection.items)) {
             this.albumItems = bannersSection.items;
-            console.log('Banner Items:', this.albumItems);
           } else {
             console.error('Banners section not found in API response:', data);
           }
