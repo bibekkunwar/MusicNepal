@@ -9,7 +9,6 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: black;
 }
 
 /* Text content on the left side */
@@ -33,13 +32,13 @@
 /* Image on the right side */
 .image {
   flex: 1;
-  padding-left: 5px;
+  padding-left: 10px;
   max-width: 100%;
   height: auto;
 }
 .image img{
   max-width: 100%;
-  height: auto;
+  height: 300px;
 }
 
 @media (max-width: 768px) {

@@ -42,6 +42,20 @@ import { NationalComponent } from './Audio/audiopage/national/national.component
 import { ChildrenComponent } from './Audio/audiopage/children/children.component';
 import { RemixComponent } from './Audio/audiopage/remix/remix.component';
 import { PopRockComponent } from './Audio/audiopage/popRock/popRock.component';
+import { GeetiKathaComponent } from './Audio/audiopage/geetiKatha/geetiKatha.component';
+
+
+
+
+//video page Components
+
+// new upload is fetched from home page latest videos
+import { VideoPageComponent } from './videoPage/videoPage.component';
+import { GoldenHitsComponent } from './videoPage/goldenHits/goldenHits.component';
+import { PopRockVideosComponent } from './videoPage/popRock-videos/popRock-videos.component';
+import { AdhunikVideosComponent } from './videoPage/adhunikVideos/adhunikVideos.component';
+import { PopSongsVideoComponent } from './videoPage/popSongs-video/popSongs-video.component';
+import { AdhunikSongsVideosComponent } from './videoPage/adhunik-Songs-videos/adhunikSongs-videos.component';
 
 
 
@@ -55,7 +69,7 @@ import { AudioService } from './services/audioPage/audio.service';
 // other effects
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { GeetiKathaComponent } from './Audio/audiopage/geetiKatha/geetiKatha.component';
+
 
 
 @NgModule({
@@ -87,10 +101,15 @@ import { GeetiKathaComponent } from './Audio/audiopage/geetiKatha/geetiKatha.com
     ChildrenComponent,
     RemixComponent,
     PopRockComponent,
-    GeetiKathaComponent
+    GeetiKathaComponent,
+    VideoPageComponent,
+    GoldenHitsComponent,
+    PopRockVideosComponent,
+    AdhunikVideosComponent,
+    PopSongsVideoComponent,
+    AdhunikSongsVideosComponent
 
-
-  ],
+   ],
   imports: [
     BrowserModule,
     CommonModule,

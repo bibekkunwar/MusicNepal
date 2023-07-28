@@ -11,7 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class LatestVideosComponent implements OnInit{
 
   recentVideos: any={}
-  playLink: any='https://www.youtube.com/embed/5GwJXq3Jva4';
+  playLink: any='https://www.youtube.com/embed/QjACF2UsGD4';
 
   constructor(private youtubeApiService: YoutubeApiService, private sanitizer: DomSanitizer) {}
 
@@ -33,8 +33,6 @@ export class LatestVideosComponent implements OnInit{
 
   playVideo(videoId: string) {
     this.playLink = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' +videoId + '?autoplay=1&mute=1' );
-
-    console.log(this.playLink)
   }
 
 }

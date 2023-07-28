@@ -28,7 +28,7 @@ export class GeetiKathaComponent implements OnInit {
         items: 3
       },
       940: {
-        items: 1
+        items: 4
       }
     },
     nav: true
@@ -49,7 +49,7 @@ export class GeetiKathaComponent implements OnInit {
     this.audioService.getAudioData().subscribe(
       (data: any) => {
         if (data.status && data.data && Array.isArray(data.data)) {
-          const gazalSection = data.data.find((section: any) => section.title === 'geetiKatha');
+          const gazalSection = data.data.find((section: any) => section.title === 'Geeti Katha');
           if (gazalSection && gazalSection.albums && Array.isArray(gazalSection.albums)) {
 
             this.geetiKathaItems = gazalSection.albums;

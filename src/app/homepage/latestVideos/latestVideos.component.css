@@ -12,7 +12,13 @@
   cursor: pointer;
   color: white;
   text-decoration: none;
+object-fit: cover;
   padding: 10px;
+  background-color: #191919;
+}
+
+.side-videos img{
+  object-fit: contain;
 }
 
 .side-videos h6{
@@ -20,8 +26,9 @@
 }
 
 .yt-image{
+  padding-top: 40px;
   width: 600px;
-  height:500px;
+  height:550px;
 }
 
 

@@ -1,0 +1,25 @@
+/* @import url(/src/app/homepage/latestVideos/latestVideos.component.css); */
+.latestVideos{
+
+  padding:  40px 100px 50px 152px; ;
+}
+.latestVideos-text{
+ margin-bottom: 20px;
+}
+
+.side-videos{
+  display: block;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.side-videos h6{
+  margin-top: 10px;
+}
+
+.yt-image{
+  width: 600px;
+  height:500px;
+}

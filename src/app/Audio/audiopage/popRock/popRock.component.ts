@@ -28,7 +28,7 @@ export class PopRockComponent implements OnInit {
         items: 3
       },
       940: {
-        items: 1
+        items: 4
       }
     },
     nav: true
@@ -49,7 +49,7 @@ export class PopRockComponent implements OnInit {
     this.audioService.getAudioData().subscribe(
       (data: any) => {
         if (data.status && data.data && Array.isArray(data.data)) {
-          const popRockSection = data.data.find((section: any) => section.title === 'PopRock');
+          const popRockSection = data.data.find((section: any) => section.title === 'Pop Rock');
           if (popRockSection && popRockSection.albums && Array.isArray(popRockSection.albums)) {
 
             this.popRockItems = popRockSection.albums;

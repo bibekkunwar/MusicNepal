@@ -1,0 +1,52 @@
+<div class="audio-container">
+  <div class="nav-bar">
+    <app-nav-bar></app-nav-bar>
+  </div>
+
+  <div class="audio-Home">
+    <div class="audio-container">
+      <div class="audio-head">
+        <div class="head-text">
+          <h1 class="headingTop">Video</h1>
+          <p>
+            <span class="pageTopBtn" [routerLink]="['']">HOME</span> &gt; Video
+          </p>
+          <div class="search-box">
+            <button class="btn-search">
+              <i class="fas fa-search" style="background-color: #22a6b3"></i>
+            </button>
+            <input
+              type="text"
+              class="input-search"
+              placeholder="Type to Search..."
+            />
+          </div>
+        </div>
+      </div>
+      <div class="audio-body mt-1">
+        <div class="latestVideos">
+          <app-latestVideos></app-latestVideos>
+        </div>
+        <div class="goldeVits">
+          <app-goldenHits></app-goldenHits>
+        </div>
+        <div class="popRock">
+          <app-popRock-videos></app-popRock-videos>
+        </div>
+        <div class="adhunikVideos">
+          <app-adhunikVideos></app-adhunikVideos>
+        </div>
+        <div class="popSongs">
+          <app-popSongs-video></app-popSongs-video>
+        </div>
+        <div class="adhunikSongsVideos">
+          <app-adhunikSongs-videos></app-adhunikSongs-videos>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+</div>
