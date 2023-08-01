@@ -69,6 +69,7 @@ import { AudioService } from './services/audioPage/audio.service';
 // other effects
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { RadioComponent } from './Radio/Radio.component';
 
 
 
@@ -107,8 +108,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     PopRockVideosComponent,
     AdhunikVideosComponent,
     PopSongsVideoComponent,
-    AdhunikSongsVideosComponent
-
+    AdhunikSongsVideosComponent,
+    RadioComponent
    ],
   imports: [
     BrowserModule,

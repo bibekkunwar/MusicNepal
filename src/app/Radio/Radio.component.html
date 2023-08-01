@@ -1,0 +1,83 @@
+<div class="radio-container">
+  <div class="nav-bar">
+    <app-nav-bar></app-nav-bar>
+  </div>
+
+  <div class="radio-top" style="background-color: #151515">
+    <div class="radio-head">
+      <div class="head-text">
+        <h1 class="headingTop">Radio</h1>
+        <p>
+          <span class="pageTopBtn" [routerLink]="['']">HOME</span> &gt; Radio
+        </p>
+        <div class="search-box">
+          <button class="btn-search">
+            <i class="fas fa-search" style="background-color: #22a6b3"></i>
+          </button>
+          <input
+            type="text"
+            class="input-search"
+            placeholder="Type to Search..."
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="radio-bottom d-flex justify-content-center align-items-center"
+    style="background-color: #191919; padding: 100px; color: black"
+  >
+    <div class="wrapper w-75 d-flex gap-5">
+      <div class="box-square p-2">
+        <div class="d-flex align-items-center flex-column gap-2">
+          <div class="d-flex justify-content-center">
+            <img
+              width="100px"
+              src="https://dev.musicnepal.com/wp-content/uploads/2023/04/Music-City-Online-Radio-Pic.jpg"
+              alt=""
+            />
+          </div>
+
+          <p class="text-black">music city nepal</p>
+          <div
+            class="red-button d-flex justify-content-center align-items-center"
+          >
+            <p class="text-black live-button">live</p>
+            <i
+              class="fa-regular fa-circle-dot fa-beat fa-xl"
+              style="color: #cc0f0f"
+            ></i>
+          </div>
+          <marquee class="text-black">Live Broadcasting</marquee>
+          <div class="play-button" style="background-color: #151515">
+            <audio
+              #ref
+              src="https://radio-streaming-serv-2.hamropatro.com:8280/radio.mp3"
+            ></audio>
+
+
+            <i (click)="togglePlayPause()" [ngClass]="{'fa-play': !isPlaying, 'fa-pause': isPlaying}" class="stream-play fa-light fas fa-l"></i>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>saino Sangeet Ko!!!</h2>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
+        praesentium aliquid magnam voluptas aut perspiciatis quibusdam
+        dignissimos cum placeat facilis.
+        <br />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eius quo
+        eos quis a quod doloribus iusto, vitae ad adipisci beatae non eum
+        eligendi voluptatibus? Assumenda labore repellat exercitationem
+        praesentium!
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+</div>
