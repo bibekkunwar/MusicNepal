@@ -284,7 +284,7 @@ color: black;
   color: black;
   margin-bottom: 20px;
 }
-.musics .active {
+.musics.active {
   cursor: pointer;
   font-weight: bold;
   background-color: #fff;
@@ -328,16 +328,15 @@ img {
 .track-title{
   margin-left: 50px !important;
 }
+.track-list {
+  cursor: pointer;
+}
 
-.track-list.active p {
-  color: white;
+.track-list.active  {
+  background-color: red !important;
 }
 .track-title p {
   margin-bottom: 0;
   padding-top: 15px;
 }
 
-.fa-caret-down:before {
-  content: "\f0d7";
-  background-color: white;
-}
