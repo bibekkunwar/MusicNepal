@@ -57,6 +57,8 @@ import { AdhunikVideosComponent } from './videoPage/adhunikVideos/adhunikVideos.
 import { PopSongsVideoComponent } from './videoPage/popSongs-video/popSongs-video.component';
 import { AdhunikSongsVideosComponent } from './videoPage/adhunik-Songs-videos/adhunikSongs-videos.component';
 
+// Radio componenet
+import { RadioComponent } from './Radio/Radio.component';
 
 
 // services here
@@ -69,8 +71,7 @@ import { AudioService } from './services/audioPage/audio.service';
 // other effects
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { RadioComponent } from './Radio/Radio.component';
-
+import { PlayerComponent } from './layouts/player/player.component';
 
 
 @NgModule({
@@ -109,7 +110,8 @@ import { RadioComponent } from './Radio/Radio.component';
     AdhunikVideosComponent,
     PopSongsVideoComponent,
     AdhunikSongsVideosComponent,
-    RadioComponent
+    RadioComponent,
+    PlayerComponent
    ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@
     <div class="position-relatvie">
       <owl-carousel-o [options]="customOptions">
         <ng-template carouselSlide *ngFor=" let item of gazalItems">
-          <div class="item mb-3">
+          <div class="item mb-3" routerLink="/album">
             <img
               class="avatar shadow-drop-2-center"
               src="{{item.logo}}"

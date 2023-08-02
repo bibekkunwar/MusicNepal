@@ -1,0 +1,207 @@
+<app-nav-bar></app-nav-bar>
+<div class="row" id="album">
+  <div class="modal" id="myModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="wrapper">
+      <div class="top-bar">
+        <i class="fas fa-solid fa-chevron-down"></i>        <span>Now Playing</span>
+        <i class="fas fa-solid fa-ellipsis"></i>
+      </div>
+      <div class="img-area">
+        <img
+          src="https://app.momoappnepal.com/images/album/713339172637.jpg"
+          alt=""
+        />
+      </div>
+      <div class="song-details" style="text-align: left">
+        <p class="name"><strong>Album Title</strong></p>
+        <p class="name">
+          <span>Singer:</span>
+          <span style="margin-right: 5px">artist title</span>
+        </p>
+        <p class="name" v-if="track.lyricists.length">
+          <span>Lyricist:</span>
+          <span style="margin-right: 5px">lyricist title</span>
+        </p>
+        <p class="name" v-if="track.composers.length">
+          <span>Composer:</span>
+          <span style="margin-right: 5px">composer title</span>
+        </p>
+
+        <p><span>Track: </span>Track Title</p>
+      </div>
+      <div class="progress-area">
+
+      </div>
+
+      <div class="controls">
+        <i class="fa-solid fa-backward"></i>
+        <div class="play-pause">
+          <i class="fa-solid fa-play"></i>
+        </div>
+        <i class="fa-solid fa-forward"></i>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="musics">
+      <div class="header" style="display: flex; justify-content: center">
+        <span>Music list</span>
+      </div>
+      <div
+        class="trackList"
+        v-on:click="playTrack(track, index)"
+        v-for="(track, index) in album.tracks"
+      >
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+        <div class="track-list" :class="{ active: (index==currentIndex) }">
+          <div class="track-logo">
+            <img
+              src="https://mnm.truestreamz.com/images/album/default.jpg"
+              alt=""
+            />
+            <div class="track-title">
+              <p>track title</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
