@@ -11,7 +11,7 @@
 
     <div class="position-relatvie">
       <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide *ngFor=" let item of albumItems">
+        <ng-template carouselSlide *ngFor=" let item of albumItems" (click)="getPreviewAudio()">
           <div class="item mb-3">
             <img
               class="avatar shadow-drop-2-center"
@@ -34,5 +34,4 @@
       </owl-carousel-o>
     </div>
   </div>
-
 </div>

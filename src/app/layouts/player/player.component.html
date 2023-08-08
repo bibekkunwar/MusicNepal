@@ -15,64 +15,118 @@
     </div>
   </div>
   <div class="col-lg-6">
-    <div class="wrapper">
-      <div class="top-bar">
-        <i class="fas fa-solid fa-chevron-down"></i> <span>Now Playing</span>
-        <i class="fas fa-solid fa-ellipsis"></i>
-      </div>
-      <div class="img-area">
-        <img
-          src="{{trackDetail?.logo}}"
-          alt=""
-        />
-      </div>
-      <div class="song-details" style="text-align: left" >
-        <p class="name"><strong>{{trackDetail?.title}}</strong></p>
-        <p class="name">
-          <span>Singer:</span>
-          <span style="margin-right: 5px">{{trackDetail?.artists[0].title}}</span>
-        </p>
-        <p class="name">
-          <span>Lyricist:</span>
-          <span style="margin-right: 5px">{{trackDetail?.lyricists[0].title}}</span>
-        </p>
-        <p class="name">
-          <span>Composer:</span>
-          <span style="margin-right: 5px">{{trackDetail?.composers[0].title}}</span>
-        </p>
-      </div>
-      <div class="progress-area"></div>
-
-      <div class="controls">
-        <i class="fa-solid fa-backward" (click)="playPreviousTrack()"></i>
-        <div class="play-pause" (click)="isPlaying ? pauseAudio() : playAudio()" >
-          <i class="fa-solid fa-play" [ngClass]="{'fa-play': !isPlaying, 'fa-pause': isPlaying}"></i>
+    <div class="container">
+      <header>
+        <div class="playlist">
+          <img height="30px" width="40px" src="assets/logo.png" alt="" />
         </div>
-        <i class="fa-solid fa-forward"  (click)="playNextTrack()"></i>
+        <div class="setting">
+          <button class="head-button">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.newitventure.movienmasti"
+            >
+              Download MOMO
+            </a>
+            <i class="fa-solid fa-download"></i>
+          </button>
+        </div>
+      </header>
+      <main>
+        <div class="album-art">
+          <img src="{{ trackDetail?.logo }}" alt="" />
+        </div>
+        <div class="player">
+          <i
+            (click)="toggleMute()"
+            class="fa volume"
+            [ngClass]="{ 'fa-volume-mute': isMuted, 'fa-volume-up': !isMuted }"
+          ></i>
+          <i (click)="playPreviousTrack()" class="fa fa-fast-backward"></i>
+          <i
+            (click)="togglePlayPause()"
+            class="fa play-pause"
+            [ngClass]="!isPlaying ? 'fa-play' : 'fa-pause'"
+          ></i>
+          <i (click)="playNextTrack()" class="fa fa-fast-forward"></i>
+        </div>
+      </main>
+
+      <audio class="audioPlayer hidden"
+        #audioPlayer
+        style="height: 5px"
+        controls
+        src="https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"
+      ></audio>
+
+      <!--propgress bar-->
+
+      <div class="progress">
+        <div class="played">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <!-- enbd of progress-->
+      <div class="player-details">
+        <div class="song-details" style="text-align: left">
+          <p class="name">
+            <strong>{{ trackDetail?.title }}</strong>
+          </p>
+          <p class="name">
+            <span>Singer:</span>
+            <span style="margin-right: 5px">{{
+              trackDetail?.artists[0].title
+            }}</span>
+          </p>
+          <p class="name">
+            <span>Lyricist:</span>
+            <span style="margin-right: 5px">{{
+              trackDetail?.lyricists[0].title
+            }}</span>
+          </p>
+          <p class="name">
+            <span>Composer:</span>
+            <span style="margin-right: 5px">{{
+              trackDetail?.composers[0].title
+            }}</span>
+          </p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="col-lg-6">
-    <div class="musics"  >
+    <div class="musics pr-4">
       <div class="header" style="display: flex; justify-content: center">
         <span>Music list</span>
       </div>
-      <div>
-        <div class="track-list" *ngFor="let item of audioList" (click)="getSpecificTrackDetails(item)" [ngClass]="{'active': item === activeItem}" >
-          <div class="track-logo">
-            <img
-              src="https://mnm.truestreamz.com/images/album/default.jpg"
-              alt=""
-            />
+      <div class="mr-10px">
+        <div
+          class="track-list"
+          *ngFor="let item of audioList"
+          (click)="getSpecificTrackDetails(item)"
+          [ngClass]="{ active: item === activeItem }"
+        >
+          <div
+            class="d-flex align-items-center justify-content-between my-2"
+            [ngClass]="activeTrackID === item.id ? 'activeTrack' : ''"
+          >
+            <img class="track-img" src="{{ item.logo }}" alt="" />
             <div class="track-title">
-              <p>{{item.title}}</p>
+              {{ item.title }}
+            </div>
+            <div class="play-button-container">
+              <i class="play-right fa-solid fa-circle-play pr-10px"></i>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </div>
+
+
+
+<!-- check-->
+
 <app-footer></app-footer>

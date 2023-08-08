@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { AudioService } from 'src/app/services/audioPage/audio.service';
+
 
 @Component({
   selector: 'app-player',
@@ -8,26 +9,47 @@ import { AudioService } from 'src/app/services/audioPage/audio.service';
   styleUrls: ['./player.component.css'],
 })
 export class PlayerComponent implements OnInit {
+
   audioList: any = [];
+
+
   trackDetail: any;
-  playLink: any = 'https://app.momoappnepal.com/api/v1/musicnepal/albums/duniyako-nimti-eauta_NOAPC0610271';
-activeItem:any;
-previewAudio = "https://app.momoappnepal.com/api/v1/musicnepal/audios/preview?type=track&slug=duniyako-nimti-eauta_NOAPC0610271";
-uniqueSlug: any;
-isPlaying: boolean = false;
-  constructor(
-    private audioService: AudioService,
-  ) {}
+
+  activeItem: any;
+  activeTrackID!:number
+
+  isPlaying: boolean = false;
+  isMuted: boolean = false;
+
+  playMusicUrl!: string;
+
+  constructor(private audioService: AudioService) {}
   ngOnInit() {
     this.fetchPreviewAudio();
-
   }
+
+  ngAfterViewInit(): void {
+    // Verify if audioPlayerRef is defined after view initialization
+    if (this.audioPlayerRef) {
+      const audioPlayer: HTMLAudioElement = this.audioPlayerRef.nativeElement;
+
+      audioPlayer.onplay = () => {
+        this.isPlaying = true;
+      };
+
+      audioPlayer.onpause = () => {
+        this.isPlaying = false;
+      };
+    }
+  }
+  @ViewChild('audioPlayer') audioPlayerRef!: ElementRef<HTMLAudioElement>;
 
   fetchPreviewAudio(): void {
     this.audioService.getPreviewData().subscribe({
       next: (res) => {
         this.audioList = res.data.tracks;
-        this.getSpecificTrackDetails(this.audioList[0])
+        console.log("äudiolist",this.audioList)
+        this.getSpecificTrackDetails(this.audioList[0]);
       },
       error: (error) => {
         throw error;
@@ -36,36 +58,92 @@ isPlaying: boolean = false;
   }
 
   getSpecificTrackDetails(trackDetail: any) {
+    const audioPlayer: HTMLAudioElement | null = this.audioPlayerRef?.nativeElement;
     this.trackDetail = trackDetail;
     this.activeItem = trackDetail;
+    this.getPreviewAudio(trackDetail.slug);
+    console.log('slug', trackDetail)
+    this.activeTrackID=this.trackDetail.id
+    audioPlayer.currentTime=0;
+
   }
 
-  getaudiotracks(trackDetail:string){
-    this.uniqueSlug = this.trackDetail;
+  getPreviewAudio(slug: string) {
+    this.audioService.getPreviewAudio('track', slug).subscribe({
+      next: (res:any) => {
+        console.log("res",res)
+        this.playMusicUrl=res.preview_url
+        console.log('music url',this.playMusicUrl);
+      },
+      error: (error) => {
+        console.log('error', error)
+      }
+    });
   }
-
-  playNextTrack(): void {
-    const currentIndex = this.audioList.indexOf(this.activeItem);
-    const nextIndex = (currentIndex + 1) % this.audioList.length;
-    this.getSpecificTrackDetails(this.audioList[nextIndex]);
-  }
-
-  playPreviousTrack(): void {
-    const currentIndex = this.audioList.indexOf(this.activeItem);
-    const previousIndex = (currentIndex - 1 + this.audioList.length) % this.audioList.length;
-    this.getSpecificTrackDetails(this.audioList[previousIndex]);
-  }
-
   playAudio(): void {
-    // Your audio play logic
-    this.isPlaying = true; // Update the state to playing
+    this.isPlaying = true;
+    const audioPlayer = <HTMLAudioElement>document.getElementById('audioPlayer');
+    audioPlayer.play();
   }
 
   pauseAudio(): void {
-    // Your audio pause logic
-    this.isPlaying = false; // Update the state to paused
+    this.isPlaying = false;
+    const audioPlayer = <HTMLAudioElement>document.getElementById('audioPlayer');
+    audioPlayer.pause();
+  }
+
+  togglePlayPause(): void {
+    const audioPlayer: HTMLAudioElement | null = this.audioPlayerRef.nativeElement;
+
+    if (audioPlayer) {
+      if (this.isPlaying) {
+        audioPlayer.pause();
+      } else {
+        audioPlayer.play();
+      }
+      this.isPlaying = !this.isPlaying;
+    }
   }
 
 
+  playNextTrack(): void {
+    const audioPlayer: HTMLAudioElement | null = this.audioPlayerRef?.nativeElement;
+    if(audioPlayer){
+      audioPlayer.currentTime=0;
+      const currentIndex = this.audioList.indexOf(this.activeItem);
+      const nextIndex = (currentIndex + 1) % this.audioList.length;
+      this.getSpecificTrackDetails(this.audioList[nextIndex]);
+
+    }
+
+  }
+
+  playPreviousTrack(): void {
+    const audioPlayer: HTMLAudioElement | null = this.audioPlayerRef?.nativeElement;
+    if(audioPlayer){
+      audioPlayer.currentTime=0;
+      const currentIndex = this.audioList.indexOf(this.activeItem);
+      const previousIndex =
+        (currentIndex - 1 + this.audioList.length) % this.audioList.length;
+      this.getSpecificTrackDetails(this.audioList[previousIndex]);
+    }
+  }
+
+  // volume mute functionality
+
+
+  toggleMute(): void {
+    const audioPlayer: HTMLAudioElement | null = this.audioPlayerRef?.nativeElement;
+
+    if (audioPlayer) {
+      if (this.isMuted) {
+        audioPlayer.volume = 1.0; // Set volume to maximum (unmute)
+      } else {
+        audioPlayer.volume = 0.0; // Set volume to minimum (mute)
+      }
+
+      this.isMuted = !this.isMuted; // Toggle mute state
+    }
+  }
 
 }

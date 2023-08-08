@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HomeServiceService } from '../../services/homePage/home-service.service';
+import { AudioService } from 'src/app/services/audioPage/audio.service';
 
 @Component({
   selector: 'app-featured-release',
@@ -8,6 +9,8 @@ import { HomeServiceService } from '../../services/homePage/home-service.service
   styleUrls: ['./featured-release.component.css']
 })
 export class FeaturedReleaseComponent {
+  audioList: any = [];
+
   customOptions: OwlOptions = {
     loop: false,
     mouseDrag: true,
@@ -38,7 +41,7 @@ export class FeaturedReleaseComponent {
 
   albumItems: any[] = [];
 
-  constructor(private homeService: HomeServiceService) {}
+  constructor(private homeService: HomeServiceService, private audioService: AudioService) {}
 
   ngOnInit(): void {
     this.getBannerItems();
@@ -62,6 +65,15 @@ export class FeaturedReleaseComponent {
         console.error('Error fetching data:', error);
       }
     );
+  }
+
+  getPreviewAudio():void{
+    this.audioService.getPreviewData().subscribe(
+      (res:any) => {
+        console.log(res);
+this.audioList = res.data.tracks;
+      }
+    )
   }
 
 }

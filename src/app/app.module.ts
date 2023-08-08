@@ -69,9 +69,12 @@ import { AudioService } from './services/audioPage/audio.service';
 
 
 // other effects
+import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { PlayerComponent } from './layouts/player/player.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 
 @NgModule({
@@ -111,7 +114,9 @@ import { PlayerComponent } from './layouts/player/player.component';
     PopSongsVideoComponent,
     AdhunikSongsVideosComponent,
     RadioComponent,
-    PlayerComponent
+    PlayerComponent,
+      AboutUsComponent,
+      ContactPageComponent
    ],
   imports: [
     BrowserModule,
@@ -120,11 +125,13 @@ import { PlayerComponent } from './layouts/player/player.component';
     HttpClientModule,
     CarouselModule,
     BrowserAnimationsModule,
+    LazyLoadImageModule
   ],
   providers: [
     HomeServiceService,
     YoutubeApiService,
     AudioService,
+    {provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks}
   ],
   bootstrap: [AppComponent]
 })

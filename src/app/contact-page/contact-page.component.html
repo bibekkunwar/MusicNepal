@@ -1,0 +1,52 @@
+<app-nav-bar></app-nav-bar>
+<div class="audio-container" >
+  <div class="audio-head" >
+  <div class="head-text">
+    <h1 class="headingTop">Contact Us</h1>
+    <p><span class="pageTopBtn" [routerLink]="['']">HOME</span> &gt; CONTACT US</p>
+    <div class="search-box">
+      <button class="btn-search"><i class="fas fa-search" style="background-color: #22a6b3;"></i></button>
+      <input
+        type="text"
+        class="input-search"
+        placeholder="Type to Search..."
+      />
+    </div>
+  </div>
+</div>
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grids">
+      <div class="row">
+        <div class="col-6 gap-5">
+          <div class="col-lg-6 contact-form">
+            <form action="#" method="post">
+              <input type="text" placeholder="Subject" required="" />
+              <input type="text" placeholder="Your name" required="" />
+              <input type="email" placeholder="Your mail" required="" />
+              <textarea placeholder="Message" required=""></textarea>
+              <div class="submit1"><input type="submit" value="submit" /></div>
+            </form>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="col-lg-6 map w-100 pt-3">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6273982507114!2d85.32715677518107!3d27.69790877618799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b103027335%3A0x6e479c238963705e!2sMusic%20nepal%2C%20Anamnagar!5e0!3m2!1sen!2snp!4v1691052737093!5m2!1sen!2snp"
+              width="1200"
+              height="600"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
