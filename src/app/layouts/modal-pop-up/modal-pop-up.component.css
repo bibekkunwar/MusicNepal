@@ -1,0 +1,33 @@
+
+.pop-up{
+  background-color: #662f26;
+}
+
+.pop-title{
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+
+}
+
+.pop-button{
+  background-color: #b30b0b;
+  margin: 5px;
+}
+.contents{
+  gap: 40px;
+}
+.modal-content{
+  align-items: center;
+justify-content: center;
+color: white;
+font-size: 20px;
+}
+
+.enjoy
+{
+  padding-top: 15px;
+  font-size: 26px;
+  font-weight: 600 ;
+  text-transform: uppercase;
+}

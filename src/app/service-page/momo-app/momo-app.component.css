@@ -1,0 +1,55 @@
+@import url('/src/app/videoPage/videoPage.component.css');
+
+.youtube{
+  background-color: #191919;
+  padding-top: 100px;
+  padding-left: 180px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+}
+.left-content, .right-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20pxpx;
+}
+
+
+.left-content p, .right-content  p{
+  padding-top: 20px;
+}
+
+.yt-btn{
+  font-size: 20px;
+  margin-top: 20px;
+  padding:6px 12px ;
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  transition: 0.6;
+}
+
+video{
+  object-fit: cover;
+  height: auto;
+}
+
+.musicIntro{
+  font-size: 18px;
+}
+
+.aggregator-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+
+.momo-text p{
+  font-size: 26px;
+  font-weight: 400;
+}

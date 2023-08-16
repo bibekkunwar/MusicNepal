@@ -1,0 +1,20 @@
+@import url('/src/app/videoPage/videoPage.component.css');
+
+
+.studio{
+  padding-left: 160px;
+  padding-right: 80px;
+}
+
+.studio p{
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.join-fb{
+  background-color: #1A54A7;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 15px;
+  font-size: 18px;
+}

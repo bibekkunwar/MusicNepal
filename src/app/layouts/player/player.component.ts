@@ -1,6 +1,11 @@
 import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 import { AudioService } from 'src/app/services/audioPage/audio.service';
+import {MatDialogModule, MatDialogConfig, MatDialog} from '@angular/material/dialog';
+import { ModalPopUpComponent } from '../modal-pop-up/modal-pop-up.component';
+import { Overlay } from '@angular/cdk/overlay';
+import { MAT_DIALOG_SCROLL_STRATEGY } from '@angular/material/dialog';
+import { CustomDialogServiceService } from 'src/app/services/dialog/custom-dialog-service.service';
+
 
 
 @Component({
@@ -23,7 +28,9 @@ export class PlayerComponent implements OnInit {
 
   playMusicUrl!: string;
 
-  constructor(private audioService: AudioService) {}
+  constructor(private audioService: AudioService, private dialog: MatDialog,
+     private customDialogService: CustomDialogServiceService,
+     private overlay: Overlay) {}
   ngOnInit() {
     this.fetchPreviewAudio();
   }
@@ -50,6 +57,7 @@ export class PlayerComponent implements OnInit {
         this.audioList = res.data.tracks;
         console.log("äudiolist",this.audioList)
         this.getSpecificTrackDetails(this.audioList[0]);
+        // this.playAudio();
       },
       error: (error) => {
         throw error;
@@ -65,6 +73,7 @@ export class PlayerComponent implements OnInit {
     console.log('slug', trackDetail)
     this.activeTrackID=this.trackDetail.id
     audioPlayer.currentTime=0;
+    // this.playAudio();
 
   }
 
@@ -100,6 +109,7 @@ export class PlayerComponent implements OnInit {
         audioPlayer.pause();
       } else {
         audioPlayer.play();
+        this.popUp();
       }
       this.isPlaying = !this.isPlaying;
     }
@@ -113,6 +123,7 @@ export class PlayerComponent implements OnInit {
       const currentIndex = this.audioList.indexOf(this.activeItem);
       const nextIndex = (currentIndex + 1) % this.audioList.length;
       this.getSpecificTrackDetails(this.audioList[nextIndex]);
+      this.popUp();
 
     }
 
@@ -126,24 +137,40 @@ export class PlayerComponent implements OnInit {
       const previousIndex =
         (currentIndex - 1 + this.audioList.length) % this.audioList.length;
       this.getSpecificTrackDetails(this.audioList[previousIndex]);
+      this.popUp();
     }
   }
 
   // volume mute functionality
-
 
   toggleMute(): void {
     const audioPlayer: HTMLAudioElement | null = this.audioPlayerRef?.nativeElement;
 
     if (audioPlayer) {
       if (this.isMuted) {
-        audioPlayer.volume = 1.0; // Set volume to maximum (unmute)
+        audioPlayer.volume = 1.0;
       } else {
-        audioPlayer.volume = 0.0; // Set volume to minimum (mute)
+        audioPlayer.volume = 0.0;
       }
 
       this.isMuted = !this.isMuted; // Toggle mute state
+
+      this.popUp();
     }
+  }
+
+// Modal pop up functionality
+
+  popUp()
+  {
+    const dialogConfig = new MatDialogConfig();
+dialogConfig.disableClose = true;
+dialogConfig.autoFocus = true;
+dialogConfig.width = '50%';
+dialogConfig.position = { top: '-60%', left: '25%', right: '25%'   };
+dialogConfig.hasBackdrop = true; // Disables interaction with the background
+dialogConfig.scrollStrategy = this.overlay.scrollStrategies.block();
+this.customDialogService.openModal(ModalPopUpComponent, dialogConfig);
   }
 
 }

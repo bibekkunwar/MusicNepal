@@ -271,17 +271,18 @@ p >span{
 }
 
 .musics {
-  width: 350px;
+  width: 500px;
   margin: auto !important;
   margin-top: 50px !important;
   margin-bottom: 50px !important;
   height: 500px !important;
   overflow-y: scroll !important;
 }
-
 .header span{
   color: white !important;
   padding-left: -40px;
+  padding-top: 50px;
+  font-size: 40px;
 }
 
 .musics span {
@@ -332,16 +333,20 @@ img {
 }
 
 .track-list {
+
   cursor: pointer;
+  max-height: 300px; /* Adjust as needed */
+
 }
 
 .track-list.active  {
-  background-color: red !important;
+  background-color: rgb(137, 48, 48) !important;
 }
 .track-title p {
   margin-bottom: 0;
   padding-top: 15px;
 }
+
 
 .vol-btn{
   background-color: white;
@@ -591,7 +596,128 @@ footer .time-tracker .time {
   margin-right: 10px;
 }
 
+::-webkit-scrollbar{
+  width: 4px solid !important;
+}
 
 .pr-10px{
   padding-right: 10px;
 }
+
+
+/* new track css */
+
+
+/*top_tracks (songs)*/
+.top_tracks{
+	margin-top: 10em;
+	min-height: 220px;
+	width: 85%;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+}
+.top_tracks #track{
+  overflow-y: scroll;
+	position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+	align-items: center;
+  height: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.top_tracks #track:not(:first-child){
+   margin-top: 8px;
+}
+.top_tracks #track:hover{
+	background: rgba(255,255,255,0.05);
+}
+.top_tracks #track img{
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+}
+.top_tracks #track p{
+	color: #fff;
+}
+#actions{
+	padding: 0 5px;
+	min-width: 5%;
+	display: flex;
+	align-items: center;
+}
+#actions i{
+	cursor: pointer;
+}
+#actions p:not(:first-child){
+	margin-left: 15px;
+}
+.top_tracks #actions a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 5px;
+	color: #ccc;
+	font-size: 2em;
+}
+.top_tracks #actions a:first-child{
+	font-size: 1.5em;
+	margin-left: 10px;
+}
+#actions i:hover{
+	color: #E91E63;
+}
+/*song description part*/
+#song_desc{
+	position: relative;
+	flex: 1;
+	padding-left: 10px;
+}
+#song_desc #message{
+	position: absolute;
+	bottom: 5px;
+	right: 2.5em;
+	color: #EC407A;
+}
+#song_desc #total_download{
+	position: absolute;
+	bottom: 10px;
+	right: 22%;
+	color: #EC407A;
+}
+#song_desc p:nth-child(1){
+	text-transform: capitalize;
+}
+#song_desc p:nth-child(2){
+	opacity: 0.6;
+	margin-top: 5px;
+	font-size: 0.9em;
+}
+
+/*all id ~ heading*/
+#heading{
+	color: #fff;
+	font-size: 1.8em;
+	font-family: cursive;
+}
+
+/*actions_2 (share & download button)*/
+#actions_2{
+	min-width: 5%;
+	padding: 3px;
+	display: flex;
+	justify-content: right;
+}
+#actions_2 a{
+    color: #fff;
+}
+#actions_2 p{
+	font-size: 1.2em;
+}
+#actions_2 p:first-child{
+	margin-right: 12px;
+}
+
+
+
+/* end of new tracks css */

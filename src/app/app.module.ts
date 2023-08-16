@@ -75,6 +75,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { PlayerComponent } from './layouts/player/player.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { ModalPopUpComponent } from './layouts/modal-pop-up/modal-pop-up.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CustomDialogServiceService } from './services/dialog/custom-dialog-service.service';
+import { ServicePageComponent } from './service-page/service-page.component';
+import { YoutubeComponent } from './service-page/youtube/youtube.component';
+import { AggregatorComponent } from './service-page/aggregator/aggregator.component';
+import { MomoAppComponent } from './service-page/momo-app/momo-app.component';
+import { StudioComponent } from './service-page/studio/studio.component';
+
+
 
 
 @NgModule({
@@ -116,7 +126,12 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     RadioComponent,
     PlayerComponent,
       AboutUsComponent,
-      ContactPageComponent
+      ContactPageComponent,
+      ServicePageComponent,
+      YoutubeComponent,
+      AggregatorComponent,
+      MomoAppComponent,
+      StudioComponent
    ],
   imports: [
     BrowserModule,
@@ -125,12 +140,14 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     HttpClientModule,
     CarouselModule,
     BrowserAnimationsModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    MatDialogModule
   ],
   providers: [
     HomeServiceService,
     YoutubeApiService,
     AudioService,
+    CustomDialogServiceService,
     {provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks}
   ],
   bootstrap: [AppComponent]
