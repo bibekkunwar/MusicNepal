@@ -40,16 +40,17 @@ button.btn.btn-default:focus {
     color: green !important;
 }
 .contact-form  input[type="submit"] {
-    background: #ffb900;
-    border: 2px solid #ffb900;
+    background: red;
     padding: .3em 1em;
+    border-radius: 5px;
     text-transform: uppercase;
     color: #fff;
     font-size: 1.2em;
     font-family: 'Ropa Sans', sans-serif;
 }
 .contact-form  input[type="submit"]:hover{
-    background:none;
+    background:green;
+    border: none;
     color:black;
 }
 iframe {

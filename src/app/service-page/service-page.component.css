@@ -52,12 +52,13 @@
   height: 100%;
 }
 
-figcaption> button{
-  background-color: rgba(221, 15, 15);
+figcaption > button{
+  background-color:red;
   position: absolute;
   top: 70%;
   left: 40%;
   border-radius: 5px;
   padding: 3px;
+  opacity: 1;
 }
 

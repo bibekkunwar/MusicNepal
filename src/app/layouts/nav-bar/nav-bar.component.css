@@ -39,6 +39,9 @@ padding-right: 4px;
   float: left;
   border-radius: 50%;
 }
+.main-menu{
+  background-color: #191919;
+}
 
 .main-menu>ul {
 margin:3px 0;
@@ -89,7 +92,7 @@ li:hover .fa {
   color: red;
 }
 .main-menu:hover{
-  background-color: #241c1c;
+  background-color: black;
   width: 150px;
   transition: all 0.5s ease;
 
@@ -168,4 +171,5 @@ padding:5px;
   font-size: 12px;
 }
 }
+
 

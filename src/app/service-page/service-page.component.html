@@ -21,21 +21,22 @@
   <div class="services">
     <div class="row">
       <div class="col-6 px-4">
-        <figure class="position-relative figure">
+        <figure class="position-relative figure" routerLink="youtube">
           <div class="img-text">YOUTUBE</div>
-          <a >
-            <img routerLink="youtube"
-            class="figure-img"
-            src="https://musicnepal.com/wp-content/uploads/elementor/thumbs/YouTube-Services-q5br19nw44fy8vf9obsm2ce3wv88mx4frffzmr1jew.jpg"
-            alt="youtube"
-          />
+          <a>
+            <img
+              routerLink="/services/youtube"
+              class="figure-img"
+              src="https://musicnepal.com/wp-content/uploads/elementor/thumbs/YouTube-Services-q5br19nw44fy8vf9obsm2ce3wv88mx4frffzmr1jew.jpg"
+              alt="youtube"
+            />
           </a>
 
           <div class="overlay">
-            <figcaption><button>Learn More</button></figcaption>
+            <figcaption><button class="overlay-btn">Learn More</button></figcaption>
           </div>
         </figure>
-        <figure class="position-relative figure">
+        <figure class="position-relative figure" routerLink="aggregator">
           <div class="img-text">AGGREGATOR</div>
           <img
             class="figure-img"
@@ -46,7 +47,7 @@
             <figcaption><button>Learn More</button></figcaption>
           </div>
         </figure>
-        <figure class="position-relative figure">
+        <figure class="position-relative figure" routerLink="studio">
           <div class="img-text">STUDIO SERVICES</div>
           <img
             class="figure-img"
@@ -59,8 +60,11 @@
         </figure>
       </div>
       <div class="col-6 px-4">
-        <figure class="position-relative figure">
-          <div class="img-text">OUR APPLICATIONS <br> Phone and tablets</div>
+        <figure class="position-relative figure" routerLink="momo">
+          <div class="img-text">
+            OUR APPLICATIONS <br />
+            Phone and tablets
+          </div>
           <img
             class="figure-img"
             src="https://musicnepal.com/wp-content/uploads/elementor/thumbs/MOMO_Features_Updated-q4usonkmc3laklvdb1lodk1j11g0csdbt376zw20lk.png"

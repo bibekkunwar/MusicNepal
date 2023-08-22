@@ -1,4 +1,4 @@
-<app-nav-bar></app-nav-bar>
+<!-- <app-nav-bar></app-nav-bar> -->
 <div class="row" id="album">
   <div class="col-lg-6">
     <div class="container">
@@ -41,9 +41,8 @@
         #audioPlayer
         style="height: 5px"
         controls
-        src="https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"
+        src="https://nplb.truestreamz.com/mnm-audio/713339172637/NOAPC0610270-preview.mp3/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9OC8yMi8yMDIzIDU6MjM6NTQgQU0maGFzaF92YWx1ZT01VEFHMWYrbzRCUzNMWFdON3IxUlJBPT0mdmFsaWRtaW51dGVzPTUwMCZpZD0x"
       ></audio>
-
       <!--propgress bar-->
 
       <div class="progress">
@@ -81,49 +80,11 @@
     </div>
   </div>
 
-
-
-
   <div class="col-lg-6">
     <div class="header" style="display: flex; justify-content: center">
       <span>Music list</span>
     </div>
     <div class="musics pr-4">
-
-
-       <!-- new track list design-->
-
-  <!-- <div class="top_tracks" id="top_tracks">
-    <p id="heading"><i class='bx bxs-playlist'></i>&nbsp;&nbsp; Tracks</p>
-    <div id="track"></div>
-
-    <div id="track" *ngFor="let item of audioList" (click)="getSpecificTrackDetails(item)"
-    [ngClass]="{ active: item === activeItem }"
-    >
-      <img src="{{ item.logo }}" alt="">
-      <div id="actions">
-        <a href="#"><i class='bx bx-heart' ></i></a>
-        <a id="play_pause"><i class='bx bx-play'></i></a>
-      </div>
-
-      <audio class="audioPlayer hidden"
-        #audioPlayer
-        style="height: 5px"
-        controls
-        src="https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg"
-      ></audio>
-
-      <div id="song_desc">
-         <p>{{ item.title }}</p>
-         <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;{{
-          trackDetail?.artists[0].title
-        }}</p>
-         <p id="message">{{trackDetail.type}}</p>
-      </div>
-
-    </div>
-  </div> -->
-  <!-- end of track list design-->
       <div class="mr-10px">
         <div
           class="track-list"
@@ -157,4 +118,4 @@
 
 <!-- check-->
 
-<app-footer></app-footer>
+<!-- <app-footer></app-footer> -->

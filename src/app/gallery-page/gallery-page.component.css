@@ -1,0 +1,42 @@
+@import url(https://fonts.bunny.net/css?family=amita:700);
+
+.gallery{
+  background-color: #191919;
+}
+
+h1 {
+    color: #fefae0;
+    padding-top: 20px;
+    margin:  auto;
+    width: 450px;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 10px double #bc6c25;
+}
+
+img {
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    border: 10px solid #fefae0;
+    /* -webkit-filter: sepia(100%); */
+    /* filter: sepia(60%); */
+    transition-duration: 1s;
+}
+
+img:hover {
+    border: 5px solid #fff;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-filter: none;
+    filter: none;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

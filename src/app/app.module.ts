@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -10,7 +9,6 @@ import { AppComponent } from './app.component';
 
 import { NavBarComponent } from './layouts/nav-bar/nav-bar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
-
 
 // homePage components//
 
@@ -23,7 +21,6 @@ import { FeaturedArtistsComponent } from './homepage/featuredArtists/featuredArt
 import { LatestNewsComponent } from './homepage/latestNews/latestNews.component';
 import { CommonModule } from '@angular/common';
 import { MnIntroComponent } from './homepage/mnIntro/mnIntro.component';
-
 
 // audioPage components
 import { AudiopageComponent } from './Audio/audiopage/audiopage.component';
@@ -44,9 +41,6 @@ import { RemixComponent } from './Audio/audiopage/remix/remix.component';
 import { PopRockComponent } from './Audio/audiopage/popRock/popRock.component';
 import { GeetiKathaComponent } from './Audio/audiopage/geetiKatha/geetiKatha.component';
 
-
-
-
 //video page Components
 
 // new upload is fetched from home page latest videos
@@ -60,32 +54,37 @@ import { AdhunikSongsVideosComponent } from './videoPage/adhunik-Songs-videos/ad
 // Radio componenet
 import { RadioComponent } from './Radio/Radio.component';
 
-
 // services here
 import { HomeServiceService } from './services/homePage/home-service.service';
 import { YoutubeApiService } from './services/youtube/youtube-api.service';
 import { AudioService } from './services/audioPage/audio.service';
 
-
-
 // other effects
-import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
+import {
+  LazyLoadImageModule,
+  LAZYLOAD_IMAGE_HOOKS,
+  ScrollHooks,
+} from 'ng-lazyload-image';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlayerComponent } from './layouts/player/player.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
-import { ModalPopUpComponent } from './layouts/modal-pop-up/modal-pop-up.component';
-import {MatDialogModule} from '@angular/material/dialog';
+// import { ModalPopUpComponent } from './layouts/modal-pop-up/modal-pop-up.component';
+import { MatDialogModule } from '@angular/material/dialog';
 import { CustomDialogServiceService } from './services/dialog/custom-dialog-service.service';
 import { ServicePageComponent } from './service-page/service-page.component';
 import { YoutubeComponent } from './service-page/youtube/youtube.component';
 import { AggregatorComponent } from './service-page/aggregator/aggregator.component';
 import { MomoAppComponent } from './service-page/momo-app/momo-app.component';
 import { StudioComponent } from './service-page/studio/studio.component';
-
-
-
+import { FaqPageComponent } from './faq-page/faq-page.component';
+import { GalleryPageComponent } from './gallery-page/gallery-page.component';
+import { AnniversaryComponent } from './gallery-page/anniversary/anniversary.component';
+// import lightGallery from 'lightgallery';
+import { LightboxModule } from 'ngx-lightbox';
+import { LightgalleryModule } from 'lightgallery/angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -125,14 +124,17 @@ import { StudioComponent } from './service-page/studio/studio.component';
     AdhunikSongsVideosComponent,
     RadioComponent,
     PlayerComponent,
-      AboutUsComponent,
-      ContactPageComponent,
-      ServicePageComponent,
-      YoutubeComponent,
-      AggregatorComponent,
-      MomoAppComponent,
-      StudioComponent
-   ],
+    AboutUsComponent,
+    ContactPageComponent,
+    ServicePageComponent,
+    YoutubeComponent,
+    AggregatorComponent,
+    MomoAppComponent,
+    StudioComponent,
+    FaqPageComponent,
+    GalleryPageComponent,
+    AnniversaryComponent,
+  ],
   imports: [
     BrowserModule,
     CommonModule,
@@ -141,15 +143,19 @@ import { StudioComponent } from './service-page/studio/studio.component';
     CarouselModule,
     BrowserAnimationsModule,
     LazyLoadImageModule,
-    MatDialogModule
+    MatDialogModule,
+    LightgalleryModule,
+    LightboxModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     HomeServiceService,
     YoutubeApiService,
     AudioService,
     CustomDialogServiceService,
-    {provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks}
+    { provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -11,10 +11,13 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { ModalPopUpComponent } from './layouts/modal-pop-up/modal-pop-up.component';
 import { ServicePageComponent } from './service-page/service-page.component';
-import { youtube } from 'googleapis/build/src/apis/youtube';
 import { YoutubeComponent } from './service-page/youtube/youtube.component';
 import { AggregatorComponent } from './service-page/aggregator/aggregator.component';
 import { StudioComponent } from './service-page/studio/studio.component';
+import { FaqPageComponent } from './faq-page/faq-page.component';
+import { GalleryPageComponent } from './gallery-page/gallery-page.component';
+import { AnniversaryComponent } from './gallery-page/anniversary/anniversary.component';
+import { MnGalleryComponent } from './gallery-page/mn-gallery/mn-gallery.component';
 
 
 
@@ -31,7 +34,11 @@ const routes: Routes = [
   {path: 'services/youtube', component: YoutubeComponent},
   {path: 'services/aggregator', component: AggregatorComponent},
   {path: 'services/momo', component:MomoAppComponent},
-  {path: 'services/studio', component: StudioComponent}
+  {path: 'services/studio', component: StudioComponent},
+  {path:'faq', component: FaqPageComponent},
+{path:'gallery', component: GalleryPageComponent},
+// {path: 'anniversary', component: AnniversaryComponent},
+// {path:"mngallery", component: MnGalleryComponent},
 ];
 
 @NgModule({
